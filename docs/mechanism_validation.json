@@ -1,0 +1,10 @@
+{
+  "scenario": "B1",
+  "seed": 17,
+  "level": "ideal",
+  "n_train": 512,
+  "n_test": 4096,
+  "families_refitted": 4,
+  "joint_errors": 246,
+  "max_prediction_difference": 0.0
+}

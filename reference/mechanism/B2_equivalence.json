@@ -1,0 +1,44 @@
+[
+  {
+    "seed": 17,
+    "n": 4096,
+    "joint_wrong_P_right": 70,
+    "joint_right_P_wrong": 79,
+    "difference": -0.002197265625,
+    "interval": [
+      -0.013479045641496332,
+      0.00909197137956727
+    ],
+    "margin": 0.02,
+    "practical_equivalence": true,
+    "method": "two simultaneous exact-binomial intervals; 3-seed Bonferroni family"
+  },
+  {
+    "seed": 29,
+    "n": 4096,
+    "joint_wrong_P_right": 76,
+    "joint_right_P_wrong": 93,
+    "difference": -0.004150390625,
+    "interval": [
+      -0.016117784020824706,
+      0.007830444236649123
+    ],
+    "margin": 0.02,
+    "practical_equivalence": true,
+    "method": "two simultaneous exact-binomial intervals; 3-seed Bonferroni family"
+  },
+  {
+    "seed": 43,
+    "n": 4096,
+    "joint_wrong_P_right": 0,
+    "joint_right_P_wrong": 0,
+    "difference": 0.0,
+    "interval": [
+      -0.0013371518269085201,
+      0.0013371518269085201
+    ],
+    "margin": 0.02,
+    "practical_equivalence": true,
+    "method": "two simultaneous exact-binomial intervals; 3-seed Bonferroni family"
+  }
+]

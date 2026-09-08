@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "q": 1.0,
+      "family": "joint",
+      "n": 168,
+      "correct": null,
+      "accuracy": null,
+      "auroc": 0.8811143505021056,
+      "average_precision": 0.41536364617690597,
+      "squared_loss": 0.4743076171259423,
+      "positive_direction_correct": 20,
+      "positive_direction_n": 21,
+      "ledger": {
+        "final_eigendecompositions": 84,
+        "inner_eigendecompositions": 0,
+        "historical_inner_cache_reused": true,
+        "full_training_from_raw_replayed": false,
+        "max_historical_score_error": 3.524958103184872e-13
+      }
+    },
+    {
+      "q": 1.0,
+      "family": "A_match",
+      "n": 168,
+      "correct": null,
+      "accuracy": null,
+      "auroc": 0.8276643990929706,
+      "average_precision": 0.3280819597094613,
+      "squared_loss": 0.6058757472640928,
+      "positive_direction_correct": 16,
+      "positive_direction_n": 21,
+      "ledger": {
+        "final_eigendecompositions": 84,
+        "inner_eigendecompositions": 0,
+        "historical_inner_cache_reused": true,
+        "full_training_from_raw_replayed": false,
+        "max_historical_score_error": 5.300204719560497e-13
+      }
+    }
+  ],
+  "seconds": 9.013401456002612
+}

@@ -1,0 +1,60 @@
+{
+  "date": "2026-09-07",
+  "Costanzo2016": {
+    "paper": "https://pubmed.ncbi.nlm.nih.gov/27708008/",
+    "data": "https://thecellmap.org/yeast/costanzo2016/",
+    "thresholds": "https://boonelab.ccbr.utoronto.ca/supplement/costanzo2016/",
+    "role": "Real independent-study double deletion growth inputs; no target-to-target expression input; same DMA30 assay environment within matched record."
+  },
+  "Proposer": {
+    "source_archive": "Proposer_Witness_Minimal_Gate_v1.zip",
+    "member": "proposer_witness_gate_v1/results/predictions_post_unsealing.csv",
+    "label_definition": "Previously used masked significant-response direction; not independently curated direct-edge truth.",
+    "baseline_retrained": false
+  },
+  "extraction_provenance": {
+    "source_url": "https://thecellmap.org/costanzo2016/data_files/Raw%20genetic%20interaction%20datasets%3A%20Pair-wise%20interaction%20format.zip",
+    "source_page": "https://thecellmap.org/yeast/costanzo2016/",
+    "archive_sha256": "05adf2aa309e5336cd1c3045eb033a2bc7b24e6f249d57a0cc25549ec6772522",
+    "member": "Data File S1. Raw genetic interaction datasets: Pair-wise interaction format/SGA_NxN.txt",
+    "header": [
+      "Query Strain ID",
+      "Query allele name",
+      "Array Strain ID",
+      "Array allele name",
+      "Arraytype/Temp",
+      "Genetic interaction score (ε)",
+      "P-value",
+      "Query single mutant fitness (SMF)",
+      "Array SMF",
+      "Double mutant fitness",
+      "Double mutant fitness standard deviation"
+    ],
+    "total_NxN_rows": 12698939,
+    "matched_rows": 957,
+    "covered_pairs": 657,
+    "uncovered_pairs": 571,
+    "other_temperature_matches": 34,
+    "endpoint_count": 475,
+    "endpoint_disjoint_saved_folds": true,
+    "original_predictions_sha256": "bcb8f4bc3af7dadef5b60e83247e5d11324c57b16a4249c87caef0c2ee6c47bf",
+    "frozen_proposer_sha256": "b226931aaff08dbb893624475205446480804ed0212574fdee0ee5191d20d51f",
+    "protocol_sha256": "36136b1d6c0446da252a73d356719cea0937ad2a6e1dd74922fa4dacd3176645",
+    "runtime_seconds": 19.7733896130012
+  },
+  "reference_semantics": "Masked significant total-expression-response orientation from the previous project; not externally curated direct-edge truth. New Costanzo inputs are growth fitness from a separate study; no candidate-to-candidate direct expression cell is used.",
+  "validation_scope": "Fixed original Proposer scores and previously used endpoint folds. New fits and inner selection exclude outer labels/endpoints, but old Proposer training ancestry is inherited.",
+  "input_hashes": {
+    "frozen_proposer.json": "b226931aaff08dbb893624475205446480804ed0212574fdee0ee5191d20d51f",
+    "proposer_context_counts.json": "45451460eb30f6f5dc33675c8cbc3ade9252bb5d0eb156aea1d02753bb848801",
+    "costanzo_matched_records.json": "b9b1a591950a0e35818e8731fcf81478442a20855255a9616d356ce0efa49f07"
+  },
+  "runtime_packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "double_readout": "Real yeast double deletion growth fitness, not double-perturbation transcriptomics. Missing single fitness is retained with explicit masks."
+}

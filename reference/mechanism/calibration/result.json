@@ -1,0 +1,84 @@
+{
+  "levels": [
+    {
+      "id": "noise1",
+      "relative_scale": 0.003,
+      "omega_P": 0.006499787802483789,
+      "omega_D": 0.013064891303191559,
+      "classification_budget_confirmed": true,
+      "auc_budget_confirmed": false
+    },
+    {
+      "id": "noise2",
+      "relative_scale": 0.01,
+      "omega_P": 0.021665959341612633,
+      "omega_D": 0.0435496376773052,
+      "classification_budget_confirmed": true,
+      "auc_budget_confirmed": false
+    }
+  ],
+  "rule": {
+    "selection": "two largest grid entries whose simultaneous upper symbol-error sum is <= 0.05",
+    "grid": [
+      0.001,
+      0.003,
+      0.01,
+      0.03,
+      0.1
+    ],
+    "selection_alpha": 0.05,
+    "selection_event_count": 20,
+    "confirmation_alpha": 0.05,
+    "confirmation_event_count": 8,
+    "primary_budget": "classification",
+    "secondary_budget": "AUROC at t=0.1; not used to select noise",
+    "failed_confirmation": "retain the selected level and report failure; no reselection",
+    "scale_source": "independent B1 raw arrays, global RMS over n x 2 x 7 entries",
+    "transfer_to_B2": "same absolute standard deviations, no B2 rescaling",
+    "tail_handling": "no exclusions; nonfinite decodes conservatively count as errors",
+    "registered_before_results": true
+  },
+  "scale": {
+    "P_RMS": 2.166595934161263,
+    "D_RMS": 4.35496376773052,
+    "source_audit": {
+      "stream": "15a255e83bd5d484a8d01dfae6b64c4d5a3c99e19886cda220cec1ba6de7dce5",
+      "expression_noise_stream": "9b47d0abe1f6b1c2e63c8f660d7f7f6bf2229a12b9155f9f408c08dd7779d0d6",
+      "phenotype_noise_stream": "df9fd972570980752bbe5c60e45919a6f4e57af9e00a4b8b34ec10ea48cfc84c",
+      "n": 4096,
+      "phase": "calibration-scale",
+      "purpose": "raw-RMS",
+      "scenario": "B1",
+      "seed": 17,
+      "level": "ideal",
+      "noise_std": [
+        0.0,
+        0.0
+      ],
+      "positive_count": 2069,
+      "independent_instances": 4096
+    },
+    "per_instance_P_RMS_quantiles": [
+      0.010069063606898273,
+      0.04144489751843201,
+      0.10063587388350664,
+      0.6399494723369046,
+      4.146515053086214,
+      8.832775128729628,
+      20.779589308200155
+    ],
+    "per_instance_D_RMS_quantiles": [
+      0.001093106158553643,
+      0.004370725926704011,
+      0.010167484988583558,
+      0.27166063813661934,
+      7.3614685973033875,
+      16.146780822327155,
+      92.08021796242497
+    ]
+  },
+  "seconds": 87.15683216399339,
+  "encoder_records": 53248,
+  "selection_confirmation_independent": true,
+  "formal_tests_used": false
+}

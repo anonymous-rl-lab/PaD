@@ -1,0 +1,11 @@
+/runs/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+*.log
+*.pkl
+*.zip

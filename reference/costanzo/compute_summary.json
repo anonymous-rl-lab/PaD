@@ -1,0 +1,23 @@
+{
+  "actual_supervised_fits": 1034,
+  "sum_fit_seconds": 773.1396863300033,
+  "counts_by_family": {
+    "xgboost": 425,
+    "catboost": 322,
+    "svm": 287
+  },
+  "formal_selected_models": 35,
+  "red_models": 3,
+  "gpu_hours": 0,
+  "paid_compute_jobs": 0,
+  "tree_iterations": {
+    "catboost": 500,
+    "xgboost": 300
+  },
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "note": "Includes smoke and pilot plus recomputations after documented protocol-clarification hash invalidation; no outcome-based grid changes."
+}

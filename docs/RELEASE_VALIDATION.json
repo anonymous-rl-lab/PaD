@@ -1,0 +1,125 @@
+{
+  "release": "GitHub v4 / toolkit 0.1.1",
+  "paper": "v08 unchanged",
+  "environment": {
+    "python": "3.12",
+    "os": "Linux",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0"
+  },
+  "source_tests": {
+    "passed": 25
+  },
+  "installed_wheel_tests": {
+    "passed": 25,
+    "source_directory_on_import_path": false
+  },
+  "readout_regressions": {
+    "nonfinite_readout_cases": 12,
+    "finite_outputs": true,
+    "exchange_checks": true
+  },
+  "byte_identical_data_reference_config_files": 735,
+  "frozen_reference_rescore": {
+    "mechanism_flows": 120,
+    "B1_classification_certificates": 9,
+    "external_selected_records": 455
+  },
+  "B1_fresh_four_learner_refit": {
+    "n_train": 512,
+    "n_test": 4096,
+    "seed": 17,
+    "level": "ideal",
+    "max_prediction_difference": 0.0,
+    "joint_errors": 246
+  },
+  "public_API_biological_refits": [
+    {
+      "dataset": "Costanzo",
+      "task": "direction",
+      "n": 657,
+      "outer_folds": 5,
+      "correct": 611,
+      "auroc": 0.9751467419570548,
+      "max_prediction_difference": 2.5743296383495817e-15
+    },
+    {
+      "dataset": "KEGG",
+      "task": "ranking",
+      "n": 168,
+      "outer_folds": 84,
+      "correct": null,
+      "auroc": 0.8811143505021056,
+      "max_prediction_difference": 3.2429614549300823e-13
+    }
+  ],
+  "compatibility": {
+    "finite_readout_samples_unchanged": 1000,
+    "old_model_package_version": "0.1.0",
+    "loaded_model_format": 1,
+    "old_model_prediction_max_difference": 0.0
+  },
+  "smoke": {
+    "mechanism_learners": 4,
+    "direct_solver_max_error": 5.329070518200751e-15,
+    "external_fits": [
+      {
+        "dataset": "costanzo",
+        "family": "svm",
+        "finite": true
+      },
+      {
+        "dataset": "costanzo",
+        "family": "xgboost",
+        "finite": true
+      },
+      {
+        "dataset": "costanzo",
+        "family": "catboost",
+        "finite": true
+      },
+      {
+        "dataset": "jonikas",
+        "family": "svm",
+        "finite": true
+      },
+      {
+        "dataset": "jonikas",
+        "family": "xgboost",
+        "finite": true
+      },
+      {
+        "dataset": "jonikas",
+        "family": "catboost",
+        "finite": true
+      }
+    ],
+    "raw_panel_preparation": {
+      "genes": 349,
+      "source_rows_scanned": null,
+      "selected_raw_rows": 84650,
+      "missing_single_imputed_wildtype": [
+        "CIN8",
+        "EAF5",
+        "ELA1",
+        "GCR2",
+        "IES2",
+        "NPR2",
+        "RAD18",
+        "RAD50",
+        "RPD3",
+        "UBC8",
+        "URE2"
+      ],
+      "max_matrix_errors": {
+        "G": 0.0,
+        "S": 0.0,
+        "H": 0.0
+      },
+      "original_archive_used": false,
+      "seconds": 0.20572692700079642
+    }
+  },
+  "scope": "Current maintenance regression, one complete mechanism block, full PaD biological refits and full reference rescore; not all historical model training rerun. No public hosting identity or cross-platform guarantee."
+}

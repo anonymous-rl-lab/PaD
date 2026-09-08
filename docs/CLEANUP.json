@@ -1,0 +1,33 @@
+{
+  "original_files": 3393,
+  "original_uncompressed_bytes": 390567610,
+  "preserved_source_file_count": 748,
+  "removed_categories": {
+    "Repeated archive inventories, historical candidates and redundant supporting files": {
+      "files": 149,
+      "bytes": 15544616
+    },
+    "Duplicate modules and obsolete/debug/history entry points": {
+      "files": 26,
+      "bytes": 169900
+    },
+    "Debug logs and repeated fit event/append logs": {
+      "files": 821,
+      "bytes": 70784810
+    },
+    "Generated external model pickles": {
+      "files": 455,
+      "bytes": 108444764
+    },
+    "Generated encodings, model factors and selection caches; obsolete prepared subpanels": {
+      "files": 1194,
+      "bytes": 119699641
+    }
+  },
+  "retained_formal_mechanism_blocks": 30,
+  "retained_mechanism_flows": 120,
+  "retained_selected_external_records": 455,
+  "paper_version": "v08",
+  "paper_changed": false,
+  "additional_frozen_paper_evidence_files": 1
+}

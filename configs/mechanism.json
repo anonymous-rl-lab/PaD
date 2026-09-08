@@ -1,0 +1,137 @@
+{
+  "version": "v3",
+  "status": "execution_protocol_frozen",
+  "created": "2026-09-07",
+  "external_preregistration": false,
+  "frozen_algorithm": "v4",
+  "P_retraining": false,
+  "kernel_width": 0.5,
+  "regularizers": [
+    3e-05,
+    0.0003,
+    0.003,
+    0.03,
+    0.3
+  ],
+  "learners": {
+    "joint": 35,
+    "A_match": 35,
+    "A_rbf": 35,
+    "full_P_RBF": 5
+  },
+  "physical": {
+    "kappa": 0.6,
+    "sigma_P": 1,
+    "sigma_D": 1,
+    "delta_rule": "a-0.3",
+    "nu_rule": "b",
+    "u0": 1,
+    "v0": 1,
+    "z": [
+      -0.8,
+      0.8,
+      -0.6,
+      0.6,
+      -0.4,
+      0.4,
+      0.0
+    ],
+    "W_index": 6
+  },
+  "scenarios": [
+    {
+      "id": "B1",
+      "a": 0.5,
+      "b": 2,
+      "rho": 0.5
+    },
+    {
+      "id": "B2",
+      "a": 1,
+      "b": 0.5,
+      "rho": 0.5
+    },
+    {
+      "id": "B3",
+      "a": 1,
+      "b": 0.5,
+      "rho": -0.5
+    },
+    {
+      "id": "B4",
+      "a": 1,
+      "b": 0,
+      "rho": 0
+    },
+    {
+      "id": "B5",
+      "a": 1,
+      "b": 0,
+      "rho": 0.8
+    },
+    {
+      "id": "B6",
+      "a": 4,
+      "b": 2,
+      "rho": 0
+    }
+  ],
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "pilot_scenarios": [
+    "B1",
+    "B2"
+  ],
+  "pilot_training_n": 128,
+  "formal_training_n": 512,
+  "inner_folds": 5,
+  "independent_test_n": 4096,
+  "preprocessing": "fit within each training subset; no test-derived panel scales",
+  "primary_certification": "classification",
+  "family_alpha": 0.05,
+  "certification_M_reserved": 30,
+  "ideal_B2_equivalence_margin": 0.02,
+  "equivalence_method": "paired discordance probabilities, simultaneous exact binomial intervals; Bonferroni over 3 B2 seeds",
+  "noise_scenarios": [
+    "B1",
+    "B2"
+  ],
+  "nonzero_noise_levels": null,
+  "noise_level_status": "calibrate before formal tests; not numerically specified",
+  "background_availability": [
+    1,
+    0.5,
+    0
+  ],
+  "mask_salt": "Proposer-v3-context-20260907",
+  "mask_rule": "sort SHA256(salt + canonical unordered pair); retain first half",
+  "C_record_count": 168,
+  "C_requires_full_background_replay": true,
+  "G_monotonicity_required": false,
+  "results": null,
+  "B1_certification_max_errors": 456,
+  "calibration_selection_confirmation_independent": true,
+  "random_stream_key": [
+    "phase",
+    "purpose",
+    "scenario",
+    "replicate_seed",
+    "noise_level"
+  ],
+  "background_50_percent_unit": "unordered candidate pair, retaining its full original context or marking all its context unavailable",
+  "formal_cpu_wall_budget_seconds": 7200,
+  "calibration_grid_relative_scales": [
+    0.001,
+    0.003,
+    0.01,
+    0.03,
+    0.1
+  ],
+  "calibration_selection_n": 4096,
+  "calibration_confirmation_n": 16384,
+  "calibration_relative_scale_rule": "RMS over independent scale-calibration raw response arrays, frozen before grid selection",
+  "calibration_scale_n": 4096
+}

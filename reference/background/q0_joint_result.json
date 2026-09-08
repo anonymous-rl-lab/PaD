@@ -1,0 +1,20 @@
+{
+  "q": 0.0,
+  "family": "joint",
+  "n": 168,
+  "correct": null,
+  "accuracy": null,
+  "auroc": 0.8717201166180758,
+  "average_precision": 0.4178245443969232,
+  "squared_loss": 0.48939676791072384,
+  "positive_direction_correct": 19,
+  "positive_direction_n": 21,
+  "ledger": {
+    "actual_eigendecompositions": 10388,
+    "candidate_inner_evaluations": 194810,
+    "cache_hits": 29162,
+    "endpoint_checks": 39550,
+    "seconds": 31.506785958001274,
+    "historical_inner_cache_reused": false
+  }
+}

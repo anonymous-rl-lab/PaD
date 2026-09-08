@@ -1,0 +1,48 @@
+{
+  "formal": [
+    {
+      "family": "svm",
+      "seed": 17,
+      "inner_fits": 12645,
+      "outer_fits": 84,
+      "sum_fit_seconds": 37.2353873310858
+    },
+    {
+      "family": "xgboost",
+      "seed": 17,
+      "inner_fits": 5620,
+      "outer_fits": 84,
+      "sum_fit_seconds": 198.44896941903426
+    },
+    {
+      "family": "catboost",
+      "seed": 17,
+      "inner_fits": 5620,
+      "outer_fits": 84,
+      "sum_fit_seconds": 1891.137120615942
+    },
+    {
+      "family": "catboost",
+      "seed": 29,
+      "inner_fits": 5620,
+      "outer_fits": 84,
+      "sum_fit_seconds": 1901.7917576539767
+    },
+    {
+      "family": "catboost",
+      "seed": 43,
+      "inner_fits": 5620,
+      "outer_fits": 84,
+      "sum_fit_seconds": 1852.487264494015
+    }
+  ],
+  "total_inner_fits": 35125,
+  "total_outer_fits": 420,
+  "sum_fit_seconds": 5881.100499514054,
+  "workers": 4,
+  "numerical_threads": 1,
+  "GPU": false,
+  "paid_compute_jobs": 0,
+  "legacy_pilot_ledger": "pilot_legacy_append_ledger.jsonl",
+  "note": "Per-batch immutable events are authoritative for formal execution; historical pilot append log is retained separately."
+}

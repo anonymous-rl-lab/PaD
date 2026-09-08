@@ -1,0 +1,21 @@
+{
+  "selection": "two largest grid entries whose simultaneous upper symbol-error sum is <= 0.05",
+  "grid": [
+    0.001,
+    0.003,
+    0.01,
+    0.03,
+    0.1
+  ],
+  "selection_alpha": 0.05,
+  "selection_event_count": 20,
+  "confirmation_alpha": 0.05,
+  "confirmation_event_count": 8,
+  "primary_budget": "classification",
+  "secondary_budget": "AUROC at t=0.1; not used to select noise",
+  "failed_confirmation": "retain the selected level and report failure; no reselection",
+  "scale_source": "independent B1 raw arrays, global RMS over n x 2 x 7 entries",
+  "transfer_to_B2": "same absolute standard deviations, no B2 rescaling",
+  "tail_handling": "no exclusions; nonfinite decodes conservatively count as errors",
+  "registered_before_results": true
+}

@@ -1,0 +1,39 @@
+{
+  "P_RMS": 2.166595934161263,
+  "D_RMS": 4.35496376773052,
+  "source_audit": {
+    "stream": "15a255e83bd5d484a8d01dfae6b64c4d5a3c99e19886cda220cec1ba6de7dce5",
+    "expression_noise_stream": "9b47d0abe1f6b1c2e63c8f660d7f7f6bf2229a12b9155f9f408c08dd7779d0d6",
+    "phenotype_noise_stream": "df9fd972570980752bbe5c60e45919a6f4e57af9e00a4b8b34ec10ea48cfc84c",
+    "n": 4096,
+    "phase": "calibration-scale",
+    "purpose": "raw-RMS",
+    "scenario": "B1",
+    "seed": 17,
+    "level": "ideal",
+    "noise_std": [
+      0.0,
+      0.0
+    ],
+    "positive_count": 2069,
+    "independent_instances": 4096
+  },
+  "per_instance_P_RMS_quantiles": [
+    0.010069063606898273,
+    0.04144489751843201,
+    0.10063587388350664,
+    0.6399494723369046,
+    4.146515053086214,
+    8.832775128729628,
+    20.779589308200155
+  ],
+  "per_instance_D_RMS_quantiles": [
+    0.001093106158553643,
+    0.004370725926704011,
+    0.010167484988583558,
+    0.27166063813661934,
+    7.3614685973033875,
+    16.146780822327155,
+    92.08021796242497
+  ]
+}

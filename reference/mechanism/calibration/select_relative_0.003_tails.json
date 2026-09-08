@@ -1,0 +1,38 @@
+[
+  {
+    "group": "weak_expression",
+    "n": 1011,
+    "error_T": 0,
+    "error_Q": 2
+  },
+  {
+    "group": "near_threshold",
+    "n": 445,
+    "error_T": 0,
+    "error_Q": 1
+  },
+  {
+    "group": "low_readout",
+    "n": 782,
+    "error_T": 0,
+    "error_Q": 0
+  },
+  {
+    "group": "bad_Q",
+    "n": 2,
+    "error_T": 0,
+    "error_Q": 2
+  },
+  {
+    "group": "saturation_P",
+    "n": 0,
+    "error_T": 0,
+    "error_Q": 0
+  },
+  {
+    "group": "saturation_D",
+    "n": 2,
+    "error_T": 0,
+    "error_Q": 2
+  }
+]

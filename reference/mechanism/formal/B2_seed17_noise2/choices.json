@@ -1,0 +1,128 @@
+[
+  {
+    "family": "joint",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.3,
+    "selected_inner_accuracy": 0.828125,
+    "best_inner_accuracy": 0.833984375,
+    "shortfall": 0.005859375,
+    "paired_SE": 0.009771738546259652,
+    "eligible_count": 9,
+    "n_train": 512,
+    "seconds": 0.9920000730053289,
+    "preprocessing": {
+      "P_linear_RMS": 1.11830337256412,
+      "odd_RMS": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "odd_norm": 1e-08,
+      "full_summary_constants": "fixed measurement maps; zero local raw D has train-only 0.01 median fallback"
+    }
+  },
+  {
+    "family": "A_match",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "selected_inner_accuracy": 0.8359375,
+    "best_inner_accuracy": 0.8359375,
+    "shortfall": 0.0,
+    "paired_SE": 0.0,
+    "eligible_count": 1,
+    "n_train": 512,
+    "seconds": 0.7780069470027229,
+    "preprocessing": {
+      "P_linear_RMS": 1.11830337256412,
+      "odd_RMS": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "odd_norm": 1e-08,
+      "full_summary_constants": "fixed measurement maps; zero local raw D has train-only 0.01 median fallback"
+    }
+  },
+  {
+    "family": "A_rbf",
+    "weight_index": 4,
+    "theta": [
+      0.8333333333333334,
+      0.16666666666666663
+    ],
+    "regularization": 0.3,
+    "selected_inner_accuracy": 0.828125,
+    "best_inner_accuracy": 0.8359375,
+    "shortfall": 0.0078125,
+    "paired_SE": 0.0078125,
+    "eligible_count": 3,
+    "n_train": 512,
+    "seconds": 0.5429274610069115,
+    "preprocessing": {
+      "P_linear_RMS": 1.11830337256412,
+      "odd_RMS": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "odd_norm": 1e-08,
+      "full_summary_constants": "fixed measurement maps; zero local raw D has train-only 0.01 median fallback"
+    }
+  },
+  {
+    "family": "full_P_RBF",
+    "weight_index": 0,
+    "theta": [
+      1.0,
+      0.0
+    ],
+    "regularization": 0.3,
+    "selected_inner_accuracy": 0.826171875,
+    "best_inner_accuracy": 0.828125,
+    "shortfall": 0.001953125,
+    "paired_SE": 0.009375621080821451,
+    "eligible_count": 4,
+    "n_train": 512,
+    "seconds": 0.08320388800348155,
+    "preprocessing": {
+      "P_linear_RMS": 1.11830337256412,
+      "odd_RMS": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "odd_norm": 1e-08,
+      "full_summary_constants": "fixed measurement maps; zero local raw D has train-only 0.01 median fallback"
+    }
+  }
+]

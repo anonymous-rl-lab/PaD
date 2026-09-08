@@ -1,0 +1,4 @@
+-r requirements-core.txt
+catboost==1.2.8
+xgboost-cpu==3.0.5
+joblib==1.5.3

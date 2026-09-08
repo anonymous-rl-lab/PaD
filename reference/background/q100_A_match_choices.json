@@ -1,0 +1,926 @@
+[
+  {
+    "group": "CWH41|MNS1",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.3,
+    "n_train": 122
+  },
+  {
+    "group": "CWH41|ROT2",
+    "weight_index": 6,
+    "theta": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "MNN2|MNS1",
+    "weight_index": 6,
+    "theta": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "regularization": 0.0003,
+    "n_train": 140
+  },
+  {
+    "group": "ANP1|MNN2",
+    "weight_index": 5,
+    "theta": [
+      0.0,
+      0.5,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 162
+  },
+  {
+    "group": "MNS1|ROT2",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.003,
+    "n_train": 122
+  },
+  {
+    "group": "STP22|VPS28",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 158
+  },
+  {
+    "group": "BTS1|HMG1",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 166
+  },
+  {
+    "group": "ALG5|DIE2",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG5|ALG8",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG5|ALG6",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG8|DIE2",
+    "weight_index": 1,
+    "theta": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "regularization": 0.3,
+    "n_train": 126
+  },
+  {
+    "group": "ALG9|DIE2",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG8|ALG9",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG12|ALG9",
+    "weight_index": 6,
+    "theta": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "regularization": 3e-05,
+    "n_train": 126
+  },
+  {
+    "group": "ALG6|ALG9",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG6|DIE2",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG6|ALG8",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG12|ALG3",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 3e-05,
+    "n_train": 126
+  },
+  {
+    "group": "ALG3|ALG9",
+    "weight_index": 6,
+    "theta": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "regularization": 3e-05,
+    "n_train": 126
+  },
+  {
+    "group": "OST3|OST5",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ANP1|MNS1",
+    "weight_index": 6,
+    "theta": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "regularization": 0.0003,
+    "n_train": 140
+  },
+  {
+    "group": "MNS1|OST5",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 122
+  },
+  {
+    "group": "DIE2|MNS1",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 122
+  },
+  {
+    "group": "ALG5|MNS1",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.003,
+    "n_train": 122
+  },
+  {
+    "group": "ALG8|MNS1",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 122
+  },
+  {
+    "group": "ALG12|MNS1",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 122
+  },
+  {
+    "group": "ALG9|MNS1",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 122
+  },
+  {
+    "group": "ALG6|MNS1",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.003,
+    "n_train": 122
+  },
+  {
+    "group": "ALG3|MNS1",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 122
+  },
+  {
+    "group": "MNS1|OST3",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 122
+  },
+  {
+    "group": "PCT1|PSD2",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 166
+  },
+  {
+    "group": "DOA4|STP22",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 158
+  },
+  {
+    "group": "GCS1|STP22",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 158
+  },
+  {
+    "group": "GOS1|TLG2",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 162
+  },
+  {
+    "group": "SEC22|TLG2",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 162
+  },
+  {
+    "group": "DOA4|GCS1",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 158
+  },
+  {
+    "group": "DOA4|VPS28",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 158
+  },
+  {
+    "group": "CWH41|OST5",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "CWH41|DIE2",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG5|CWH41",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG8|CWH41",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG12|CWH41",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG9|CWH41",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG6|CWH41",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG3|CWH41",
+    "weight_index": 1,
+    "theta": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "regularization": 0.3,
+    "n_train": 126
+  },
+  {
+    "group": "CWH41|OST3",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "UBC7|UFD2",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 162
+  },
+  {
+    "group": "HRD1|UFD2",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 162
+  },
+  {
+    "group": "GOS1|SEC22",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 162
+  },
+  {
+    "group": "GCS1|VPS28",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 158
+  },
+  {
+    "group": "OST5|ROT2",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "DIE2|ROT2",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG5|ROT2",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG8|ROT2",
+    "weight_index": 6,
+    "theta": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "regularization": 3e-05,
+    "n_train": 126
+  },
+  {
+    "group": "ALG12|ROT2",
+    "weight_index": 6,
+    "theta": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "regularization": 3e-05,
+    "n_train": 126
+  },
+  {
+    "group": "ALG9|ROT2",
+    "weight_index": 6,
+    "theta": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG6|ROT2",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG3|ROT2",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "OST3|ROT2",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "DIE2|OST5",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG5|OST5",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG8|OST5",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG12|OST5",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG9|OST5",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 3e-05,
+    "n_train": 126
+  },
+  {
+    "group": "ALG6|OST5",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG3|OST5",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG12|DIE2",
+    "weight_index": 6,
+    "theta": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "regularization": 3e-05,
+    "n_train": 126
+  },
+  {
+    "group": "ALG3|DIE2",
+    "weight_index": 6,
+    "theta": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "DIE2|OST3",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "HRD1|UBC7",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 162
+  },
+  {
+    "group": "ALG12|ALG5",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG5|ALG9",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 3e-05,
+    "n_train": 126
+  },
+  {
+    "group": "ALG3|ALG5",
+    "weight_index": 1,
+    "theta": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "regularization": 0.3,
+    "n_train": 126
+  },
+  {
+    "group": "ALG5|OST3",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "PMT1|PMT2",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 166
+  },
+  {
+    "group": "ALG12|ALG8",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG3|ALG8",
+    "weight_index": 1,
+    "theta": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "regularization": 0.3,
+    "n_train": 126
+  },
+  {
+    "group": "ALG8|OST3",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG12|ALG6",
+    "weight_index": 4,
+    "theta": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG12|OST3",
+    "weight_index": 6,
+    "theta": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "regularization": 3e-05,
+    "n_train": 126
+  },
+  {
+    "group": "ALG9|OST3",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG3|ALG6",
+    "weight_index": 1,
+    "theta": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "regularization": 0.3,
+    "n_train": 126
+  },
+  {
+    "group": "ALG6|OST3",
+    "weight_index": 2,
+    "theta": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "regularization": 0.0003,
+    "n_train": 126
+  },
+  {
+    "group": "ALG3|OST3",
+    "weight_index": 1,
+    "theta": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "regularization": 0.3,
+    "n_train": 126
+  }
+]

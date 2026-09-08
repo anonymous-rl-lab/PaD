@@ -1,0 +1,84 @@
+{
+  "seed": 42,
+  "seconds": 1.7621045269988826,
+  "n_genes": 444,
+  "n_observed_unordered_AB": 42240,
+  "fro_error": 206.85871765693574,
+  "nrmse": 0.5701555121030976,
+  "matrix_asymmetry": 0.0,
+  "max_release_probability_exchange_error": 0.5241803426581547,
+  "metrics": [
+    {
+      "panel": "KEGG",
+      "model": "red_released",
+      "n": 168,
+      "n_positive": 21,
+      "n_true_AB": 122,
+      "auroc": 0.7518626498218335,
+      "average_precision": 0.2748464317264821
+    },
+    {
+      "panel": "KEGG",
+      "model": "red_point_distance",
+      "n": 168,
+      "n_positive": 21,
+      "n_true_AB": 122,
+      "auroc": 0.7259475218658892,
+      "average_precision": 0.22167837201691742
+    },
+    {
+      "panel": "KEGG",
+      "model": "raw_mask",
+      "n": 168,
+      "n_positive": 21,
+      "n_true_AB": 122,
+      "auroc": 0.6177518626498218,
+      "average_precision": 0.14957043172064705
+    },
+    {
+      "panel": "KEGG",
+      "model": "single_only",
+      "n": 168,
+      "n_positive": 21,
+      "n_true_AB": 122,
+      "auroc": 0.3686426951733074,
+      "average_precision": 0.09690188489538663
+    },
+    {
+      "panel": "glycans",
+      "model": "red_released",
+      "n": 53,
+      "n_positive": 9,
+      "n_true_AB": 40,
+      "auroc": 0.7348484848484849,
+      "average_precision": 0.4553822539116657
+    },
+    {
+      "panel": "glycans",
+      "model": "red_point_distance",
+      "n": 53,
+      "n_positive": 9,
+      "n_true_AB": 40,
+      "auroc": 0.7297979797979798,
+      "average_precision": 0.48813186813186815
+    },
+    {
+      "panel": "glycans",
+      "model": "raw_mask",
+      "n": 53,
+      "n_positive": 9,
+      "n_true_AB": 40,
+      "auroc": 0.9065656565656566,
+      "average_precision": 0.7485909822866346
+    },
+    {
+      "panel": "glycans",
+      "model": "single_only",
+      "n": 53,
+      "n_positive": 9,
+      "n_true_AB": 40,
+      "auroc": 0.31313131313131315,
+      "average_precision": 0.14818279451950467
+    }
+  ]
+}

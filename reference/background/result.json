@@ -1,0 +1,161 @@
+{
+  "results": [
+    {
+      "q": 1.0,
+      "family": "joint",
+      "n": 168,
+      "correct": null,
+      "accuracy": null,
+      "auroc": 0.8811143505021056,
+      "average_precision": 0.41536364617690597,
+      "squared_loss": 0.4743076171259423,
+      "positive_direction_correct": 20,
+      "positive_direction_n": 21,
+      "ledger": {
+        "final_eigendecompositions": 84,
+        "inner_eigendecompositions": 0,
+        "historical_inner_cache_reused": true,
+        "full_training_from_raw_replayed": false,
+        "max_historical_score_error": 3.524958103184872e-13
+      }
+    },
+    {
+      "q": 1.0,
+      "family": "A_match",
+      "n": 168,
+      "correct": null,
+      "accuracy": null,
+      "auroc": 0.8276643990929706,
+      "average_precision": 0.3280819597094613,
+      "squared_loss": 0.6058757472640928,
+      "positive_direction_correct": 16,
+      "positive_direction_n": 21,
+      "ledger": {
+        "final_eigendecompositions": 84,
+        "inner_eigendecompositions": 0,
+        "historical_inner_cache_reused": true,
+        "full_training_from_raw_replayed": false,
+        "max_historical_score_error": 5.300204719560497e-13
+      }
+    },
+    {
+      "q": 0.5,
+      "family": "joint",
+      "n": 168,
+      "correct": null,
+      "accuracy": null,
+      "auroc": 0.7120181405895691,
+      "average_precision": 0.26962874038325285,
+      "squared_loss": 0.6141338049356572,
+      "positive_direction_correct": 19,
+      "positive_direction_n": 21,
+      "ledger": {
+        "actual_eigendecompositions": 10388,
+        "candidate_inner_evaluations": 194810,
+        "cache_hits": 29162,
+        "endpoint_checks": 39550,
+        "seconds": 29.53335283100023,
+        "historical_inner_cache_reused": false
+      }
+    },
+    {
+      "q": 0.5,
+      "family": "A_match",
+      "n": 168,
+      "correct": null,
+      "accuracy": null,
+      "auroc": 0.7324263038548753,
+      "average_precision": 0.22706490174235505,
+      "squared_loss": 0.6847507747515529,
+      "positive_direction_correct": 15,
+      "positive_direction_n": 21,
+      "ledger": {
+        "actual_eigendecompositions": 10388,
+        "candidate_inner_evaluations": 194810,
+        "cache_hits": 29162,
+        "endpoint_checks": 39550,
+        "seconds": 33.95647897399613,
+        "historical_inner_cache_reused": false
+      }
+    },
+    {
+      "q": 0.0,
+      "family": "joint",
+      "n": 168,
+      "correct": null,
+      "accuracy": null,
+      "auroc": 0.8717201166180758,
+      "average_precision": 0.4178245443969232,
+      "squared_loss": 0.48939676791072384,
+      "positive_direction_correct": 19,
+      "positive_direction_n": 21,
+      "ledger": {
+        "actual_eigendecompositions": 10388,
+        "candidate_inner_evaluations": 194810,
+        "cache_hits": 29162,
+        "endpoint_checks": 39550,
+        "seconds": 31.506785958001274,
+        "historical_inner_cache_reused": false
+      }
+    },
+    {
+      "q": 0.0,
+      "family": "A_match",
+      "n": 168,
+      "correct": null,
+      "accuracy": null,
+      "auroc": 0.8075801749271138,
+      "average_precision": 0.3214191429760837,
+      "squared_loss": 0.629710690411957,
+      "positive_direction_correct": 16,
+      "positive_direction_n": 21,
+      "ledger": {
+        "actual_eigendecompositions": 10388,
+        "candidate_inner_evaluations": 194810,
+        "cache_hits": 29162,
+        "endpoint_checks": 39550,
+        "seconds": 30.21306333800021,
+        "historical_inner_cache_reused": false
+      }
+    }
+  ],
+  "paired_changes": [
+    {
+      "q": 1.0,
+      "auc_joint": 0.8811143505021056,
+      "auc_additive": 0.8276643990929706,
+      "gain": 0.053449951409135,
+      "rank_gain_sum": 165.0,
+      "rank_improvements": 298,
+      "rank_losses": 133,
+      "direction_fixed": 4,
+      "direction_broken": 0
+    },
+    {
+      "q": 0.5,
+      "auc_joint": 0.7120181405895691,
+      "auc_additive": 0.7324263038548753,
+      "gain": -0.020408163265306145,
+      "rank_gain_sum": -63.0,
+      "rank_improvements": 406,
+      "rank_losses": 469,
+      "direction_fixed": 5,
+      "direction_broken": 1
+    },
+    {
+      "q": 0.0,
+      "auc_joint": 0.8717201166180758,
+      "auc_additive": 0.8075801749271138,
+      "gain": 0.06413994169096204,
+      "rank_gain_sum": 198.0,
+      "rank_improvements": 348,
+      "rank_losses": 150,
+      "direction_fixed": 3,
+      "direction_broken": 0
+    }
+  ],
+  "seconds": 134.87479738300317,
+  "q50_meaning": "42 of 84 unordered pairs permitted full original context; others none",
+  "full_record_denominator": 168,
+  "main_results_not_overwritten": true
+}

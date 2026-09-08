@@ -1,0 +1,25 @@
+{
+  "genes": 349,
+  "source_rows_scanned": 12698939,
+  "selected_raw_rows": 84650,
+  "observed_unordered_double_pairs": 54515,
+  "missing_single_imputed_wildtype": [
+    "CIN8",
+    "EAF5",
+    "ELA1",
+    "GCR2",
+    "IES2",
+    "NPR2",
+    "RAD18",
+    "RAD50",
+    "RPD3",
+    "UBC8",
+    "URE2"
+  ],
+  "target_double_median_max_error": 0.0,
+  "source_archive_sha256": "05adf2aa309e5336cd1c3045eb033a2bc7b24e6f249d57a0cc25549ec6772522",
+  "seconds": 18.87744709799881,
+  "target_label_read": false,
+  "single_missing_official_workbook_confirmed": true,
+  "missingness_rule_timing": "input audit before viewing Red results"
+}

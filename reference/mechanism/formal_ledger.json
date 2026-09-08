@@ -1,0 +1,15 @@
+{
+  "completed_blocks": 30,
+  "completed_procedures": 120,
+  "planned_procedures": 120,
+  "actual_eigendecompositions": 3270,
+  "candidate_fold_evaluations": 16500,
+  "independent_train_instances": 15360,
+  "independent_test_instances": 122880,
+  "total_seconds": 320.3695016099955,
+  "not_run": [],
+  "certification_M": 30,
+  "epochs": null,
+  "optimizer": "exact kernel ridge linear solve; shared spectral regularization path",
+  "GPU": false
+}

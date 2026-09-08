@@ -1,0 +1,267 @@
+{
+  "phase": "formal",
+  "scenario": "B6",
+  "seed": 29,
+  "level": "ideal",
+  "noise_std": [
+    0.0,
+    0.0
+  ],
+  "n_train": 512,
+  "n_test": 4096,
+  "results": [
+    {
+      "family": "joint",
+      "errors": 0,
+      "error_rate": 0.0,
+      "n": 4096,
+      "correct": 4096,
+      "accuracy": 1.0,
+      "auroc": 1.0,
+      "average_precision": 1.0,
+      "squared_loss": 0.8856500074384885,
+      "certification_M": 30,
+      "risk_upper": 0.029419175634136974,
+      "additive_error_lower": 1.583562091655993e-05,
+      "classification_certified": false,
+      "B1_integer_rule": null,
+      "auc_lower": 0.9411613050388901,
+      "auc_correction": 0.058838694961109946,
+      "auc_certified": false
+    },
+    {
+      "family": "A_match",
+      "errors": 0,
+      "error_rate": 0.0,
+      "n": 4096,
+      "correct": 4096,
+      "accuracy": 1.0,
+      "auroc": 1.0,
+      "average_precision": 1.0,
+      "squared_loss": 0.9407759025874809
+    },
+    {
+      "family": "A_rbf",
+      "errors": 0,
+      "error_rate": 0.0,
+      "n": 4096,
+      "correct": 4096,
+      "accuracy": 1.0,
+      "auroc": 1.0,
+      "average_precision": 1.0,
+      "squared_loss": 0.8866780205830344
+    },
+    {
+      "family": "full_P_RBF",
+      "errors": 0,
+      "error_rate": 0.0,
+      "n": 4096,
+      "correct": 4096,
+      "accuracy": 1.0,
+      "auroc": 1.0,
+      "average_precision": 1.0,
+      "squared_loss": 0.8866780205830344
+    }
+  ],
+  "raw_P_errors": 1965,
+  "theory_ideal": {
+    "P_error": 3.167124183311986e-05,
+    "P_auc": 0.999999992291371,
+    "joint_error": 3.872108215522035e-06,
+    "joint_auc": 0.9999999998730186,
+    "additive_error_lower": 1.583562091655993e-05,
+    "additive_auc_upper": 0.9999999994984662,
+    "conditional_d": 2.0
+  },
+  "ideal_B2_equivalence": null,
+  "train_audit": {
+    "stream": "1cade538f0aeab38b5948c2e013549cac45ab0198cd3e3d43ffcf647adc5e916",
+    "expression_noise_stream": "0772cde7f6afc111423ff46ff827c3062009b95ca2b557b8c546c4757b023f01",
+    "phenotype_noise_stream": "d7f34560f3d060222f23a0ab67546eea3e30a6ae6b8b0d8b841c81625d38ebaa",
+    "n": 512,
+    "phase": "formal",
+    "purpose": "train",
+    "scenario": "B6",
+    "seed": 29,
+    "level": "ideal",
+    "noise_std": [
+      0.0,
+      0.0
+    ],
+    "positive_count": 262,
+    "independent_instances": 512,
+    "full_encoder_records": 512,
+    "feature_dimensions": [
+      8,
+      23
+    ],
+    "finite_feature_arrays": true,
+    "decoder_bad_Q": 2,
+    "decoder_bad_T": 0,
+    "saturation_P": 0,
+    "saturation_D": 2
+  },
+  "test_audit": {
+    "stream": "6f0e647001f5039f210a3c105a16e5909ed40403b51418011eb181770117b9d4",
+    "expression_noise_stream": "8d0edd12eece1931cdd638bce6ff369ad1bf6ffd9a952c0508e266d50c08dad4",
+    "phenotype_noise_stream": "cf9644a6652eaf50f784d978b54336b89951a74201102560135dffa52e812c16",
+    "n": 4096,
+    "phase": "formal",
+    "purpose": "test",
+    "scenario": "B6",
+    "seed": 29,
+    "level": "ideal",
+    "noise_std": [
+      0.0,
+      0.0
+    ],
+    "positive_count": 2041,
+    "independent_instances": 4096,
+    "full_encoder_records": 4096,
+    "feature_dimensions": [
+      8,
+      23
+    ],
+    "finite_feature_arrays": true,
+    "decoder_bad_Q": 3,
+    "decoder_bad_T": 0,
+    "saturation_P": 0,
+    "saturation_D": 3
+  },
+  "choices": [
+    {
+      "family": "joint",
+      "weight_index": 2,
+      "theta": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "regularization": 0.3,
+      "selected_inner_accuracy": 1.0,
+      "best_inner_accuracy": 1.0,
+      "shortfall": 0.0,
+      "paired_SE": 0.0,
+      "eligible_count": 19,
+      "n_train": 512,
+      "seconds": 0.7296106510038953,
+      "preprocessing": {
+        "P_linear_RMS": 0.7004287315950705,
+        "odd_RMS": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "odd_norm": 1e-08,
+        "full_summary_constants": "fixed measurement maps; zero local raw D has train-only 0.01 median fallback"
+      }
+    },
+    {
+      "family": "A_match",
+      "weight_index": 2,
+      "theta": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "regularization": 0.3,
+      "selected_inner_accuracy": 1.0,
+      "best_inner_accuracy": 1.0,
+      "shortfall": 0.0,
+      "paired_SE": 0.0,
+      "eligible_count": 18,
+      "n_train": 512,
+      "seconds": 0.7604468659992563,
+      "preprocessing": {
+        "P_linear_RMS": 0.7004287315950705,
+        "odd_RMS": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "odd_norm": 1e-08,
+        "full_summary_constants": "fixed measurement maps; zero local raw D has train-only 0.01 median fallback"
+      }
+    },
+    {
+      "family": "A_rbf",
+      "weight_index": 0,
+      "theta": [
+        1.0,
+        0.0
+      ],
+      "regularization": 0.3,
+      "selected_inner_accuracy": 1.0,
+      "best_inner_accuracy": 1.0,
+      "shortfall": 0.0,
+      "paired_SE": 0.0,
+      "eligible_count": 30,
+      "n_train": 512,
+      "seconds": 0.5267382570018526,
+      "preprocessing": {
+        "P_linear_RMS": 0.7004287315950705,
+        "odd_RMS": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "odd_norm": 1e-08,
+        "full_summary_constants": "fixed measurement maps; zero local raw D has train-only 0.01 median fallback"
+      }
+    },
+    {
+      "family": "full_P_RBF",
+      "weight_index": 0,
+      "theta": [
+        1.0,
+        0.0
+      ],
+      "regularization": 0.3,
+      "selected_inner_accuracy": 1.0,
+      "best_inner_accuracy": 1.0,
+      "shortfall": 0.0,
+      "paired_SE": 0.0,
+      "eligible_count": 5,
+      "n_train": 512,
+      "seconds": 0.0873996580048697,
+      "preprocessing": {
+        "P_linear_RMS": 0.7004287315950705,
+        "odd_RMS": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "odd_norm": 1e-08,
+        "full_summary_constants": "fixed measurement maps; zero local raw D has train-only 0.01 median fallback"
+      }
+    }
+  ],
+  "ledger": {
+    "candidate_fold_evaluations": 550,
+    "eigendecompositions": 109,
+    "final_fits": 4,
+    "P_only_CV_reused": true
+  },
+  "seconds": 9.428637210003217,
+  "hidden_parameters_used_for_learning": false
+}

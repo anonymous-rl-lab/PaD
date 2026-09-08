@@ -1,0 +1,45 @@
+{
+  "algorithm": "Original five-feature Proposer; fixed C=1, no intercept, max 20 strongest pseudo-label records per source; evaluation endpoints excluded from all training pairs and intervention columns. Weights freshly fitted on external expression pseudo-labels; not reused old fold coefficients.",
+  "seconds": 9.033051206999517,
+  "training_nodes": 564,
+  "training_records": 4209,
+  "evaluation_genes": 30,
+  "missing_test_genes": [],
+  "max_feature_exchange_error": 0.0,
+  "scale": [
+    2.2863309511552514,
+    1.8850613838889343,
+    12.136152744724322,
+    2.895593527401924,
+    0.48928678402894077
+  ],
+  "coefficients": [
+    -1.3345139596288158,
+    -0.2021897311472795,
+    -0.11244448155602675,
+    -2.9920029667041446,
+    0.001908803631124927
+  ],
+  "iterations": 13,
+  "endpoint_overlap_training": 0,
+  "input_hashes": {
+    "GSE42527_final_GeneExpressionMatrix.txt.gz": "7ff46469cd66c1f960c3cb811e808811b964d7bba11ff8fbfacadf38d129a255",
+    "GPL11232_full.txt": "d4f737cbd9c67aa346e8b39d5f289b46f3352b2ec16e7c3963a3f387e0e56fa7"
+  },
+  "metrics": [
+    {
+      "panel": "KEGG",
+      "n": 168,
+      "n_available": 168,
+      "auroc": 0.5364431486880465,
+      "average_precision": 0.13589988807614473
+    },
+    {
+      "panel": "glycans",
+      "n": 53,
+      "n_available": 53,
+      "auroc": 0.37626262626262624,
+      "average_precision": 0.14753399346845894
+    }
+  ]
+}
