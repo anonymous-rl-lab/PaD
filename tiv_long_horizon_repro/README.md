@@ -97,7 +97,16 @@ TIV_BASE=/path/TIV_v19_Reproducibility python3 scripts/short_route_frozen_actor.
 
 因此“准确复现论文思想”的正确表述是：论文报告的是**验证集选点后的成绩与 late 均值的分离**、以及跨种子无稳定平均优势；任何重训都应按同一协议报告 selected 与 late 两个数，而不是取最好一次。
 
-## 8. 视觉编码 Z 框架状态
+## 8. 视觉编码 Z 框架：已按交接文档接入并运行（`TIV_visual_development/`）
+
+本目录第 1–7 节是论文正文长程实验的核对与重训。用户交付的三份文档（设计、Codex 任务、框架骨架）要求的是另一件事：把摄像头图像编码 Z 接进 TD3、由 critic 反馈训练编码器，并与平滑执行层一起进入训练。这部分在 `TIV_visual_development/` 完成，阶段报告为 `TIV_visual_development/reports/REPORT_zh.md`，要点：
+
+- 同步只读程序化渲染器（v19 无 RGB 传感器，本机无 3D 引擎）：由原环境位姿与同一时刻信号相位驱动，2 Hz、96×160，逐 episode 随机光照/雾/噪声/遮挡；真值只进标签。
+- 训练环境执行层换成 comfort_v2 r2 的完整 jerk 可行执行层（环境感知 + 动作平滑一起进入训练），信息访问三臂相同；`lambda_c` 可配置，首阶段为 0。
+- 审计 16/16 通过；随机初始化编码器的监督预训练；共同适配后分叉出 frozen / supervised / joint 三臂；10 分钟烟测含强制中断恢复；三臂小规模同预算并行。
+- 一键：`cd TIV_visual_development && python3 visual_dev/pretrain.py && python3 visual_dev/run_stage.py audit && bash runs/run_pilot.sh && python3 visual_dev/run_stage.py report --tag pilot`。
+
+### 8.1 交接包原状态（接入前）
 
 `visual_z_framework/` 的 11 项契约测试在本环境全部通过（含 `TIV_BASE` 下的 v19 四个源码哈希核对与真实 actor 权重迁移）。它是接口原型：无摄像头渲染器、无预训练骨干、无视觉数据，`SceneCameraNotConnected.capture` 明确抛出 `NotImplementedError`。因此本次**没有也不能**启动 F/S/J 三臂视觉训练；v19 环境本身没有 RGB 传感器，接入需先按交接文档实现同步只读渲染器。该框架对原 13 维观测的处理（屏蔽真值灯色/倒计时通道 7、8，保留上一实际加速度通道 1）与本目录核对的观测定义一致。
 
