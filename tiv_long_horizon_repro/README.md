@@ -76,7 +76,7 @@ TIV_BASE=/path/TIV_v19_Reproducibility python3 scripts/short_route_frozen_actor.
 从归档 8 条曲线（`results/curve_diagnostics_archived.md`）与本次重训曲线中可以直接读出以下事实，它们与论文 VII-C 及冻结包 README “未修复项”一致：
 
 - **验证集峰值位置在 250 万–500 万步间随种子漂移**，峰值后报告集分数回落 2–10 个单位；这就是论文采用“20 个检查点 + 验证集选点”而不是“训练到收敛”的原因。
-- **critic 在起点状态系统性低估**：Q(s0) − MC 从 −25 左右逐步扩大到 −50 至 −95（seed 3 达 −96.6）。低估来源是三重悲观：20 步行为回报含 OU 噪声（探针见 `results/nstep_probe_s0_selected.json`，某些起点的噪声目标比无噪声真实回报低约 9 个单位）、双 critic 取最小、目标动作噪声。偏差本身不直接决定驾驶成绩（seed 2 偏差 −30 至 −65 却全程完赛），但它随训练增大，与后期退化同步。
+- **critic 在起点状态系统性低估**：Q(s0) − MC 从 −25 左右逐步扩大到 −50 至 −95（seed 3 达 −96.6）。本次用冻结包自带的 n-step 探针（`probe_nstep_bias.py`，把 19 个后续决策换成含 OU 噪声的行为动作、尾部用真实回放而非 critic）测 seed 0 选中 actor（450 万步）：五个起点的噪声 20 步目标相对无噪声真实回报只偏移 −0.2 到 −1.8（`results/nstep_probe_s0_selected.json`；冻结包 DEBUG_REPORT 在 30 万步模型上测得约 −9）。因此该检查点 −58.6 的偏差主要不是多步行为回报污染，而是通过 min(Q1′,Q2′) 与目标动作噪声反复 bootstrap 累积的悲观误差加函数逼近误差。偏差本身不直接决定驾驶成绩（seed 2 偏差 −30 至 −65 却全程完赛），但它随训练增大，与后期退化同步。
 - **回放池构成与完赛率耦合**：`buf_arrived` 低于约 0.4 时（seed 1 的 250 万–375 万步、seed 6 的 400 万步后），报告集完赛数掉到 0–3；池内几乎全是超时 episode 时，critic 看不到完整行程的价值结构，巡航速度滑到 15.24 m/s 的到达阈值以下（`cruise_v` 12–13 m/s），形成 README 所述的“bootstrap 洞”。
 - **训练脚本没有实现错误**：n-step 队列、终止标志、目标公式、延迟更新、Polyak 更新、探索与回放均与论文一致（docs 第 4 节）；冻结包 README 列出的负结果消融（整形、priming、γ<1、放宽截止、Retrace）本次未重复，也不应重复。
 
