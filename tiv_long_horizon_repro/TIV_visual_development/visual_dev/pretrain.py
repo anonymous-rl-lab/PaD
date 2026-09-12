@@ -30,6 +30,14 @@ def make_sequences(n, seed, tag):
     return seqs
 
 
+def compact(seqs):
+    """ROI→bool(H,W)，热图/有效位→uint8（取值仅 0/1，无损）；框回归保持 float32。"""
+    for seq in seqs:
+        for f in seq:
+            f['roi'] = (f['roi'][0] if f['roi'].ndim == 3 else f['roi']) > 0
+            L = f['labels']; L['heat'] = L['heat'].astype(np.uint8); L['heat_valid'] = L['heat_valid'].astype(np.uint8); L['box_valid'] = L['box_valid'].astype(np.uint8)
+
+
 def evaluate_signal(encoder, seqs, batch=16):
     rows = []
     for i in range(0, len(seqs), batch):
@@ -46,6 +54,7 @@ def main(n_train=1600, n_dev=240, n_audit=32, steps=1200, batch=16, seed=4242):
     OUT.mkdir(parents=True, exist_ok=True); t0 = time.monotonic()
     train = make_sequences(n_train, seed, 'tr'); dev = make_sequences(n_dev, seed + 100, 'dv'); audit = make_sequences(n_audit, seed + 200, 'au')
     gen_s = time.monotonic() - t0
+    for seqs in (train, dev, audit): compact(seqs)   # 无损压缩存储 dtype，降低三臂并行时的内存占用
     torch.save(dict(sequences=train, dev=dev, audit=audit, seed=seed, hw=(P.H, P.W)), OUT / 'pool.pt')
     torch.manual_seed(seed); enc = VisualEncoder(STACK); opt = torch.optim.Adam(enc.parameters(), lr=3e-4)
     rng = np.random.default_rng(seed); log = []; t1 = time.monotonic()

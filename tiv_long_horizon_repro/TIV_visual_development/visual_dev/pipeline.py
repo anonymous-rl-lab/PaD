@@ -130,7 +130,7 @@ def labels_from_frames(frame_list):
     sig = np.full((b, STACK), -100, np.int64)
     for i, seq in enumerate(frame_list):
         for j, f in enumerate(seq):
-            L = f['labels']; heat[i, j] = L['heat']; boxes[i, j] = L['boxes']; bv[i, j] = L['box_valid']
+            L = f['labels']; heat[i, j] = L['heat']; boxes[i, j] = L['boxes']; bv[i, j] = L['box_valid']   # uint8/bool 存储在此处无损转回 float32
             sig[i, j] = L['signal'] if f['meta']['association_valid'] else -100
     T = torch.as_tensor
     return dict(heat=T(heat), heat_valid=T(hv), boxes=T(boxes), box_valid=T(bv), signal=T(sig))
