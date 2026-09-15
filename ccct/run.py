@@ -268,25 +268,58 @@ def summarize(args):
     for path in sorted((out_dir / "panels").glob("ccct_*.json")):
         record["panels"][path.stem[5:]] = json.loads(path.read_text())
     for path in sorted((out_dir / "controls").glob("ccct_*.json")):
-        record["controls"][path.stem[5:]] = json.loads(path.read_text())
+        key = path.stem[5:]
+        if key.startswith("ablation"):
+            record.setdefault("ablation", {})[key] = json.loads(path.read_text())
+            continue
+        record["controls"][key] = json.loads(path.read_text())
 
-    primary = [k for k in record["panels"] if record["panels"][k]["variant"] == "primary" and record["panels"][k]["block"] == "D"]
+    primary = [
+        k for k, v in record["panels"].items() if v.get("primary_variant")
+    ]
     primary.sort()
-    if primary:
+
+    controls = record["controls"]
+    b1_ok = controls.get("B1", {}).get("rejected") is True
+    b4_rate = controls.get("size_B4", {}).get("empirical_size")
+    jon = record["panels"].get("jonikas_primary")
+    cos = record["panels"].get("costanzo_V1_fold")
+
+    # The Holm family of Section 6 is the two primary panels. Adjusting over a
+    # partial family would understate the correction, so it is only applied
+    # when both panels are present.
+    if jon is not None and cos is not None:
         raw = [record["panels"][k]["p_one_sided"] for k in primary]
         adj = stats.holm(raw)
         for key, a in zip(primary, adj):
             record["panels"][key]["p_holm"] = a
         record["holm_family"] = dict(zip(primary, adj))
 
-    controls = record["controls"]
-    b1_ok = controls.get("B1", {}).get("rejected") is True
-    size = controls.get("B4", {}).get("p_one_sided")
-    b4_rate = controls.get("B4", {}).get("empirical_size")
-    valid = b1_ok and (b4_rate is None or 0.031 <= b4_rate <= 0.073)
-    jon = record["panels"].get("jonikas_primary")
-    if jon is not None:
+    missing = []
+    if jon is None:
+        missing.append("jonikas primary panel (section 6)")
+    if cos is None:
+        missing.append("costanzo primary panel (section 6)")
+    for setting in ("B1", "B2", "B4", "B5"):
+        if setting not in controls:
+            missing.append("mechanism control %s (section 7)" % setting)
+    if b4_rate is None:
+        missing.append("B4 size across independent datasets (section 7)")
+    record["completeness"] = dict(
+        executed=sorted(record["panels"]) + sorted(controls),
+        missing=missing,
+        decision_available=not missing,
+    )
+
+    if missing:
+        record["decision"] = None
+        record["decision_note"] = (
+            "The Section 8 rule is not evaluated: " + "; ".join(missing) + ". "
+            "Nothing here is read as a verdict on cross-channel correspondence."
+        )
+    else:
         p = jon.get("p_holm", jon["p_one_sided"])
+        valid = b1_ok and (0.031 <= b4_rate <= 0.073)
         if not valid:
             record["decision"] = "CCCT_INVALID"
         else:
