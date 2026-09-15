@@ -1,0 +1,167 @@
+{
+  "protocol_sha256": "b76a942bae0d1acab9be8a1f81a8effdc7c083c4bfddada02e7e872f18dcfa8b",
+  "section": "15",
+  "panel": "jonikas",
+  "d_plus": {
+    "coordinates": 26,
+    "odd_coordinates": 11,
+    "symmetric_coordinates": 15,
+    "scale_c23": 0.11867029870268869,
+    "scale_c25": 0.6842018631042383,
+    "scale_floor": 0.01,
+    "available_c23": 164,
+    "available_c25": 164,
+    "context_missing_records": 4,
+    "partner_ties": 0
+  },
+  "context_rebuild_deviations": {
+    "coordinate_18": 0.0,
+    "coordinate_19": 0.0,
+    "coordinate_20": 0.0,
+    "coordinate_21": 0.0,
+    "coordinate_22": 0.0
+  },
+  "learners": {
+    "PaD(D)": {
+      "auroc": 0.8811143505021056,
+      "average_precision": 0.41536364617690597,
+      "weight_counts": [
+        0,
+        0,
+        20,
+        0,
+        56,
+        1,
+        7
+      ],
+      "lambda_counts": [
+        8,
+        73,
+        3,
+        0,
+        0
+      ]
+    },
+    "A_match(D)": {
+      "auroc": 0.8276643990929706,
+      "average_precision": 0.3280819597094613,
+      "weight_counts": [
+        0,
+        6,
+        30,
+        0,
+        36,
+        1,
+        11
+      ],
+      "lambda_counts": [
+        9,
+        64,
+        4,
+        0,
+        7
+      ]
+    },
+    "A_rbf(D)": {
+      "auroc": 0.8109815354713313,
+      "average_precision": 0.30141687271754547,
+      "weight_counts": [
+        0,
+        71,
+        5,
+        0,
+        3,
+        4,
+        1
+      ],
+      "lambda_counts": [
+        2,
+        67,
+        13,
+        1,
+        1
+      ]
+    },
+    "PaD(D+)": {
+      "auroc": 0.8662131519274376,
+      "average_precision": 0.42304507701722904,
+      "weight_counts": [
+        0,
+        4,
+        44,
+        0,
+        8,
+        18,
+        10
+      ],
+      "lambda_counts": [
+        17,
+        61,
+        3,
+        0,
+        3
+      ]
+    },
+    "A_match(D+)": {
+      "auroc": 0.5853579527048914,
+      "average_precision": 0.15413705318871862,
+      "weight_counts": [
+        0,
+        36,
+        10,
+        0,
+        32,
+        0,
+        6
+      ],
+      "lambda_counts": [
+        3,
+        37,
+        13,
+        0,
+        31
+      ]
+    },
+    "A_rbf(D+)": {
+      "auroc": 0.7487852283770652,
+      "average_precision": 0.2803398139475809,
+      "weight_counts": [
+        1,
+        74,
+        1,
+        3,
+        3,
+        0,
+        2
+      ],
+      "lambda_counts": [
+        3,
+        62,
+        12,
+        0,
+        7
+      ]
+    }
+  },
+  "contrasts": {
+    "Delta_1_pad_D_minus_amatch_Dplus": 0.2957563977972142,
+    "Delta_2_pad_Dplus_minus_amatch_Dplus": 0.2808551992225462,
+    "Delta_3_amatch_Dplus_minus_amatch_D": -0.2423064463880792
+  },
+  "readings": {
+    "R1": false,
+    "R2_delta_2": true,
+    "R3": false
+  },
+  "note": "R2 additionally requires the CCCT on D+ to reject at Holm-adjusted p <= 0.05; that part is decided by the D+ panel run, not here.",
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0",
+    "release": "3",
+    "cpu_count": 4
+  },
+  "runtime_seconds": 167.75868377999996
+}

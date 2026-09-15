@@ -1,0 +1,118 @@
+{
+  "protocol_sha256": "b76a942bae0d1acab9be8a1f81a8effdc7c083c4bfddada02e7e872f18dcfa8b",
+  "section": "15.4",
+  "setting": "B1",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "n_train": 512,
+  "n_test": 4096,
+  "per_seed": [
+    {
+      "seed": 17,
+      "joint(D)_errors": 231,
+      "joint(D)_error_rate": 0.056396484375,
+      "joint(D)_auroc": 0.9904642531734938,
+      "A_match(D)_errors": 1208,
+      "A_match(D)_error_rate": 0.294921875,
+      "A_match(D)_auroc": 0.7231065177672725,
+      "theory": {
+        "P_error": 0.3085375387259869,
+        "P_auc": 0.7602499389065234,
+        "joint_error": 0.018686494170325738,
+        "joint_auc": 0.9983795827142407,
+        "additive_error_lower": 0.14092571541269328,
+        "additive_auc_upper": 0.9602798854708412,
+        "conditional_d": 2.0207259421636903
+      },
+      "joint(D+)_errors": 0,
+      "joint(D+)_error_rate": 0.0,
+      "joint(D+)_auroc": 1.0,
+      "A_match(D+)_errors": 0,
+      "A_match(D+)_error_rate": 0.0,
+      "A_match(D+)_auroc": 1.0,
+      "dplus_scales": [
+        0.12127486577612806,
+        0.12127486577612806
+      ]
+    },
+    {
+      "seed": 29,
+      "joint(D)_errors": 255,
+      "joint(D)_error_rate": 0.062255859375,
+      "joint(D)_auroc": 0.9880282044837003,
+      "A_match(D)_errors": 1331,
+      "A_match(D)_error_rate": 0.324951171875,
+      "A_match(D)_auroc": 0.7002587328606487,
+      "theory": {
+        "P_error": 0.3085375387259869,
+        "P_auc": 0.7602499389065234,
+        "joint_error": 0.018686494170325738,
+        "joint_auc": 0.9983795827142407,
+        "additive_error_lower": 0.14092571541269328,
+        "additive_auc_upper": 0.9602798854708412,
+        "conditional_d": 2.0207259421636903
+      },
+      "joint(D+)_errors": 0,
+      "joint(D+)_error_rate": 0.0,
+      "joint(D+)_auroc": 1.0,
+      "A_match(D+)_errors": 0,
+      "A_match(D+)_error_rate": 0.0,
+      "A_match(D+)_auroc": 1.0,
+      "dplus_scales": [
+        0.19522536245986866,
+        0.19522536245986866
+      ]
+    },
+    {
+      "seed": 43,
+      "joint(D)_errors": 239,
+      "joint(D)_error_rate": 0.058349609375,
+      "joint(D)_auroc": 0.9893630136577979,
+      "A_match(D)_errors": 1223,
+      "A_match(D)_error_rate": 0.298583984375,
+      "A_match(D)_auroc": 0.7667298188299959,
+      "theory": {
+        "P_error": 0.3085375387259869,
+        "P_auc": 0.7602499389065234,
+        "joint_error": 0.018686494170325738,
+        "joint_auc": 0.9983795827142407,
+        "additive_error_lower": 0.14092571541269328,
+        "additive_auc_upper": 0.9602798854708412,
+        "conditional_d": 2.0207259421636903
+      },
+      "joint(D+)_errors": 0,
+      "joint(D+)_error_rate": 0.0,
+      "joint(D+)_auroc": 1.0,
+      "A_match(D+)_errors": 0,
+      "A_match(D+)_error_rate": 0.0,
+      "A_match(D+)_auroc": 1.0,
+      "dplus_scales": [
+        0.205278697688132,
+        0.205278697688132
+      ]
+    }
+  ],
+  "mean_error_rate": {
+    "joint(D)_error_rate": 0.059000651041666664,
+    "A_match(D)_error_rate": 0.30615234375,
+    "joint(D+)_error_rate": 0.0,
+    "A_match(D+)_error_rate": 0.0
+  },
+  "additive_error_lower": 0.14092571541269328,
+  "prediction": "A_match(D+) attains near-zero error",
+  "prediction_held": true,
+  "reading": "The mechanism's raw ordered profile is a direction oracle; restoring it lets the additive control reach near-zero error, so the mechanism's difficulty is a property of the exchange-invariant retained representation, not of the assay.",
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0",
+    "release": "3",
+    "cpu_count": 4
+  },
+  "runtime_seconds": 84.33242927100036
+}
