@@ -25,6 +25,17 @@ sys.path.insert(0, str(ROOT))
 
 from ccct import stats  # noqa: E402
 
+
+def read_table(path):
+    """Read a replicate table without pandas turning the string "null" into NaN.
+
+    The ``kind`` column holds "null" and "placebo"; "null" is one of pandas'
+    default NA tokens, so the default reader silently drops every null
+    replicate. Only an empty field counts as missing here.
+    """
+    return pd.read_csv(path, float_precision="round_trip",
+                       keep_default_na=False, na_values=[""])
+
 RESULTS = ROOT / "ccct_results"
 PROTOCOL = ROOT / "protocols/CCCT_FROZEN_PROTOCOL.md"
 HASH_FILE = ROOT / "protocols/CCCT_FROZEN_PROTOCOL.sha256"
@@ -75,6 +86,20 @@ def verify_record(record, table, digest):
     return out
 
 
+def verify_size(path, results, digest):
+    """Recompute a size record's rejection rate from its per-dataset table."""
+    record = json.loads(path.read_text())
+    assert record.get("protocol_sha256") == digest, ("stale protocol hash", path.name)
+    table = read_table(results / "replicates" / ("size_%s.csv" % record["setting"]))
+    assert len(table) == record["datasets"]
+    k = int((table.p_one_sided <= record["alpha"]).sum())
+    assert k == record["rejections"], (k, record["rejections"])
+    close(k / len(table), record["empirical_size"], 1e-12, "empirical_size")
+    return dict(setting=record["setting"], datasets=int(len(table)), rejections=k,
+                empirical_size=k / len(table),
+                in_interval=bool(0.031 <= k / len(table) <= 0.073), recomputed=True)
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--results", default=str(RESULTS))
@@ -86,12 +111,17 @@ def main(argv=None):
 
     for kind, folder in (("panels", "panels"), ("controls", "controls")):
         for path in sorted((results / folder).glob("ccct_*.json")):
+            if path.stem.startswith("ccct_ablation"):
+                continue  # unpermuted refits; no replicate table to recompute
+            if path.stem.startswith("ccct_size_"):
+                report.setdefault("size", []).append(verify_size(path, results, digest))
+                continue
             record = json.loads(path.read_text())
             stem = record.get("label") or record.get("setting")
             csv = results / "replicates" / (
                 "%s.csv" % (stem if kind == "panels" else "control_%s" % stem)
             )
-            table = pd.read_csv(csv, float_precision="round_trip")
+            table = read_table(csv)
             report[kind].append(verify_record(record, table, digest))
 
     primary = [p for p in report["panels"] if p["label"] in ("jonikas_primary", "costanzo_V1_fold")]
