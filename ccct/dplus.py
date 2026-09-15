@@ -138,6 +138,46 @@ def scales(raw):
     return out
 
 
+def coordinate_diagnostics(frame, y, new, pair_of_record, draws=4000, seed=20260915):
+    """Direct directional content of each restored descriptor.
+
+    Delta_3 of section 15.3 asks whether restoring direction changes what the
+    additive control achieves, which mixes two questions: does the restored
+    direction help, and do three extra coordinates hurt.  This measures the
+    first one on its own -- each descriptor scored against the reference
+    annotations, with a bootstrap over the 84 unordered pairs so the reciprocal
+    structure is resampled as a unit.
+    """
+    from sklearn.metrics import roc_auc_score
+
+    rng = np.random.default_rng(seed)
+    n_pairs = int(pair_of_record.max()) + 1
+    rows = []
+    for j, name in enumerate(("c23_mean_residual_difference", "c24_signed_rank", "c25_mean_profile_difference")):
+        v = new[:, j]
+        point = float(roc_auc_score(y, v))
+        vals = []
+        for _ in range(draws):
+            pick = rng.integers(0, n_pairs, n_pairs)
+            take = np.concatenate([np.flatnonzero(pair_of_record == p) for p in pick])
+            if len(set(y[take])) < 2:
+                continue
+            vals.append(roc_auc_score(y[take], v[take]))
+        lo, hi = np.percentile(vals, [2.5, 97.5])
+        rows.append(
+            dict(
+                coordinate=name,
+                auroc=point,
+                ci95=[float(lo), float(hi)],
+                positive_sign_on_annotated_positives=int(np.sum(v[y > 0] > 0)),
+                n_annotated_positives=int(np.sum(y > 0)),
+                reads_as=("chance" if lo <= 0.5 <= hi else ("directional" if lo > 0.5 else "reversed")),
+                bootstrap_draws=len(vals),
+            )
+        )
+    return rows
+
+
 def build(frame=None, strict=True):
     """Return ``(xd_plus, xdr_plus, odd_plus, report)`` for the Jonikas panel."""
     frame = pd.read_csv(PREPARED / "KEGG.csv") if frame is None else frame
@@ -161,6 +201,7 @@ def build(frame=None, strict=True):
     odd_plus = np.hstack([z["odd"], new])
     report = dict(
         coordinates=int(xd_plus.shape[1]),
+        restored=new,
         odd_coordinates=int(odd_plus.shape[1]),
         symmetric_coordinates=int(xd_plus.shape[1] - odd_plus.shape[1]),
         scale_c23=d23,
