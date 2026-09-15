@@ -153,6 +153,45 @@
     "R2_delta_2": true,
     "R3": false
   },
+  "restored_coordinate_diagnostics": [
+    {
+      "coordinate": "c23_mean_residual_difference",
+      "auroc": 0.5173307418205377,
+      "ci95": [
+        0.41494247159090913,
+        0.6232492313471079
+      ],
+      "positive_sign_on_annotated_positives": 9,
+      "n_annotated_positives": 21,
+      "reads_as": "chance",
+      "bootstrap_draws": 4000
+    },
+    {
+      "coordinate": "c24_signed_rank",
+      "auroc": 0.5123096857790737,
+      "ci95": [
+        0.3734359577510262,
+        0.6536876862131902
+      ],
+      "positive_sign_on_annotated_positives": 10,
+      "n_annotated_positives": 21,
+      "reads_as": "chance",
+      "bootstrap_draws": 4000
+    },
+    {
+      "coordinate": "c25_mean_profile_difference",
+      "auroc": 0.3683187560738581,
+      "ci95": [
+        0.29939056610868003,
+        0.4439598903092548
+      ],
+      "positive_sign_on_annotated_positives": 5,
+      "n_annotated_positives": 21,
+      "reads_as": "reversed",
+      "bootstrap_draws": 4000
+    }
+  ],
+  "diagnostic_status": "post-hoc; not pre-registered",
   "note": "R2 additionally requires the CCCT on D+ to reject at Holm-adjusted p <= 0.05; that part is decided by the D+ panel run, not here.",
   "environment": {
     "python": "3.12.3",
@@ -163,5 +202,5 @@
     "release": "3",
     "cpu_count": 4
   },
-  "runtime_seconds": 167.75868377999996
+  "runtime_seconds": 178.440538753
 }

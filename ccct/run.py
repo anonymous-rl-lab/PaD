@@ -145,6 +145,8 @@ def ablation(args):
         for family in fp_d.families:
             results["%s(D)" % family] = _metrics(y, out[family])
         fp_p, report = panels.make_panel("jonikas", ("PaD", "A_match", "A_rbf"), block="D+")
+        restored = report.pop("restored")
+        diagnostics = dplus.coordinate_diagnostics(fp_p.frame, y, restored, fp_p.pair_of_record)
         out_plus = fp_p.run()
         for family in fp_p.families:
             results["%s(D+)" % family] = _metrics(y, out_plus[family])
@@ -170,6 +172,8 @@ def ablation(args):
             Delta_3_amatch_Dplus_minus_amatch_D=d3,
         ),
         readings=readings,
+        restored_coordinate_diagnostics=diagnostics,
+        diagnostic_status="post-hoc; not pre-registered",
         note=(
             "R2 additionally requires the CCCT on D+ to reject at Holm-adjusted "
             "p <= 0.05; that part is decided by the D+ panel run, not here."
@@ -182,6 +186,9 @@ def ablation(args):
     (out_dir / "ccct_ablation.json").write_text(json.dumps(record, indent=2, default=_json_default) + "\n")
     for name, m in results.items():
         print("  %-14s AUROC %.6f  AP %.6f" % (name, m["auroc"], m["average_precision"]), flush=True)
+    for d in diagnostics:
+        print("  %-32s AUROC %.4f  CI [%.4f, %.4f]  %s"
+              % (d["coordinate"], d["auroc"], d["ci95"][0], d["ci95"][1], d["reads_as"]), flush=True)
     print("  Delta_1 = %.6f   Delta_2 = %.6f   Delta_3 = %.6f" % (d1, d2, d3), flush=True)
     print("  readings:", readings, flush=True)
     return 0
