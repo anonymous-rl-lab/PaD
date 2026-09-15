@@ -187,6 +187,14 @@ def ablation(args):
     return 0
 
 
+def ablation_mechanism(args):
+    from . import ablation_mechanism as am
+
+    am.run(setting=args.setting, seeds=tuple(args.seeds), out_dir=args.out,
+           protocol_sha256=protocol_sha256())
+    return 0
+
+
 def _metrics(y, out):
     return dict(
         auroc=stats.auroc(y, out["score"]),
@@ -218,6 +226,13 @@ def control(args):
     from . import mechanism
 
     for setting in args.settings:
+        if args.datasets > 1:
+            mechanism.run_size(
+                setting, datasets=args.datasets, replicates=args.replicates,
+                base_seed=args.seed, ntrain=args.ntrain, ntest=args.ntest,
+                workers=args.workers, out_dir=args.out, protocol_sha256=protocol_sha256(),
+            )
+            continue
         mechanism.run_control(
             setting,
             replicates=args.replicates,
@@ -299,6 +314,9 @@ def main(argv=None):
 
     sub.add_parser("identity", help="replicate zero: bitwise gate on both panels")
     sub.add_parser("ablation", help="section 15 interface ablation on Jonikas")
+    am = sub.add_parser("ablation-mechanism", help="section 15.4: B1 with D+")
+    am.add_argument("--setting", default="B1")
+    am.add_argument("--seeds", type=int, nargs="+", default=[17, 29, 43])
     sub.add_parser("freeze", help="write the protocol SHA-256")
     sub.add_parser("summarize", help="collect results, apply Holm, state the decision")
 
@@ -321,6 +339,8 @@ def main(argv=None):
     c.add_argument("--ntrain", type=int, default=512)
     c.add_argument("--ntest", type=int, default=4096)
     c.add_argument("--workers", type=int, default=1)
+    c.add_argument("--datasets", type=int, default=1,
+                   help=">1 estimates the rejection rate across independent datasets")
 
     w = sub.add_parser("power", help="power calibration at Jonikas dimensions")
     w.add_argument("--grid", type=float, nargs="+", default=[0.0, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0])
@@ -333,6 +353,7 @@ def main(argv=None):
     return {
         "identity": identity,
         "ablation": ablation,
+        "ablation-mechanism": ablation_mechanism,
         "panel": panel,
         "control": control,
         "power": power,
