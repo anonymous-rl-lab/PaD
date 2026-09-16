@@ -1,0 +1,10 @@
+{
+  "spec_sha256": "39a8b1388d5ff1bbbd82ace7762a270db7c47751a22c767a96f00b121ded112c",
+  "files": {
+    "P_only_costanzo.csv": "42ddc384a586fbacee4f9394b0e2b7ed600f5fb67c3ee84fe6a3c87767582617",
+    "D_only_costanzo.csv": "b38f76bbf1a98cfc793c5c67d494879e1be1d5c60e927c325edebc86df00ed9e",
+    "P_only_jonikas.csv": "e36f266e9757d0150ae48c70a369fb46db852cce1888f3c0dd0c3545382cf0ff",
+    "D_only_jonikas.csv": "28876732813bd18dce446d576fbc1a9cd73700b0a02d5aa927e478cbc6664ca4",
+    "Dplus_only_jonikas_Dplus.csv": "29abe55e5baa52f0d719fcfb33a1cb7c869e787152aa34dea8beae5203d6de52"
+  }
+}

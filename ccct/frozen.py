@@ -90,10 +90,7 @@ class FrozenPanel:
         self.panel = panel
         self.dataset = DATASETS[panel]
         self.families = tuple(families)
-        self.data = {
-            f: (k.Data(self.dataset) if f == "PaD" else Control(self.dataset, f))
-            for f in self.families
-        }
+        self.data = {f: self.make_family(f) for f in self.families}
         base = self.data[self.families[0]]
         self.frame = base.g
         self.n = base.n
@@ -137,6 +134,17 @@ class FrozenPanel:
             for f, d in self.data.items()
         }
         self.identity_order = np.arange(self.n_pairs)
+
+    def make_family(self, family):
+        """Build one learner family. Subclasses override to add families.
+
+        Whatever it returns must expose the release's ``Data`` interface --
+        ``components(tr)``, ``y``, ``directional``, ``groups``, ``allowed`` --
+        because ``kernel.fit`` and ``selection.select_from_inner`` are called on
+        it unchanged. A family that is not PaD or A_match also carries its own
+        ``weights``.
+        """
+        return k.Data(self.dataset) if family == "PaD" else Control(self.dataset, family)
 
     # ------------------------------------------------------------ channel ---
     def install_base(self, xd, xdr, odd):

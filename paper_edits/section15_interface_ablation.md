@@ -71,12 +71,20 @@ own, not that an assay can.
 do not present it that way. It is inflated by the additive control degrading,
 not by PaD improving: three near-chance odd coordinates become three of eleven
 in the linear D component and carry about 1.9 times the mean variance of the
-existing 23 coordinates in the RBF mean squared distance, and the additive
-class has no way to discount them. Its selection moves to the pure D-odd kernel
-in 36 of 84 outer groups, from 6, and to the strongest regularizer in 31 of 84,
-from 7 -- the signature of a learner absorbing added noise. PaD(D+) moves only
-from 0.881 to 0.866, because a product kernel can suppress an uninformative D
-factor.
+existing 23 coordinates in the RBF mean squared distance. The additive
+control's selection moves to the pure D-odd kernel in 36 of 84 outer groups,
+from 6, and to the strongest regularizer in 31 of 84, from 7 -- the signature
+of a learner absorbing added noise.
+
+**Corrected by the single-channel controls.** An earlier draft attributed that
+degradation to additive fusion specifically, on the reading that a product
+kernel can suppress an uninformative D factor while an additive class cannot.
+The same-rule single-channel controls refute the "specifically" part: a pure
+`D_only` learner also loses 0.088 AUROC when D+ replaces D (0.834467 to
+0.746032, pre-registered outcome X3). The three restored coordinates are a
+burden on any learner taking D as input; `A_match(D+)` loses more (0.242) and
+`PaD(D+)` less (0.015), but that is a difference of degree, not of kind. We
+report it as such.
 
 For the same reason `Delta_3 = -0.242` should not be read as "the discarded
 context carried a large amount of usable direction, with the wrong sign". It

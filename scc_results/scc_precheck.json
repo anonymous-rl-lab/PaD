@@ -1,0 +1,300 @@
+{
+  "spec_sha256": "39a8b1388d5ff1bbbd82ace7762a270db7c47751a22c767a96f00b121ded112c",
+  "section": "2",
+  "gate": "2.2 -- a candidate constant on every outer fold stops the run",
+  "note": "2.1 and 2.2 precede any reported result; 2.3 and 2.4 are records, and 2.4 is by construction a property of the completed selection",
+  "stopped_at": null,
+  "cells": {
+    "P_only_costanzo": {
+      "base_kernels": [
+        {
+          "kernel": "linear",
+          "shape": [
+            657,
+            657
+          ],
+          "numerical_rank": 1,
+          "condition_number": 2.960399724551001e+22,
+          "min_eigenvalue": -2.781500632308605e-13,
+          "max_eigenvalue": 656.9999999999998,
+          "near_zero_eigenvalues": 656
+        },
+        {
+          "kernel": "rbf",
+          "shape": [
+            657,
+            657
+          ],
+          "numerical_rank": 278,
+          "condition_number": 3.957867589436542e+19,
+          "min_eigenvalue": -2.9674494951623685e-14,
+          "max_eigenvalue": 452.7484159398491,
+          "near_zero_eigenvalues": 507
+        }
+      ],
+      "candidates": 35,
+      "outer_groups": 5,
+      "candidates_constant_on_some_fold": 0,
+      "candidates_constant_on_every_fold": 0,
+      "gate_passed": true,
+      "statistic_distinct_values_across_outer_folds": 5,
+      "statistic_per_outer_fold_sample": [
+        130,
+        101,
+        126,
+        143,
+        97
+      ],
+      "label": "P_only_costanzo",
+      "block": "D",
+      "weights_ever_selected": 2,
+      "weight_selection_counts": [
+        1,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      "effectively_single_model": false
+    },
+    "D_only_costanzo": {
+      "base_kernels": [
+        {
+          "kernel": "linear",
+          "shape": [
+            657,
+            657
+          ],
+          "numerical_rank": 12,
+          "condition_number": 1.6231644288096762e+36,
+          "min_eigenvalue": -1.0714589709242272e-13,
+          "max_eigenvalue": 293.2025693406274,
+          "near_zero_eigenvalues": 645
+        },
+        {
+          "kernel": "rbf",
+          "shape": [
+            657,
+            657
+          ],
+          "numerical_rank": 657,
+          "condition_number": 651367124.9296064,
+          "min_eigenvalue": 5.854901492520544e-07,
+          "max_eigenvalue": 381.36903485069286,
+          "near_zero_eigenvalues": 0
+        }
+      ],
+      "candidates": 35,
+      "outer_groups": 5,
+      "candidates_constant_on_some_fold": 0,
+      "candidates_constant_on_every_fold": 0,
+      "gate_passed": true,
+      "statistic_distinct_values_across_outer_folds": 4,
+      "statistic_per_outer_fold_sample": [
+        104,
+        91,
+        104,
+        127,
+        78
+      ],
+      "label": "D_only_costanzo",
+      "block": "D",
+      "weights_ever_selected": 2,
+      "weight_selection_counts": [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "effectively_single_model": false
+    },
+    "P_only_jonikas": {
+      "base_kernels": [
+        {
+          "kernel": "linear",
+          "shape": [
+            168,
+            168
+          ],
+          "numerical_rank": 1,
+          "condition_number": 2.8954485821254953e+50,
+          "min_eigenvalue": -7.500034148005421e-14,
+          "max_eigenvalue": 167.99999999999994,
+          "near_zero_eigenvalues": 167
+        },
+        {
+          "kernel": "rbf",
+          "shape": [
+            168,
+            168
+          ],
+          "numerical_rank": 168,
+          "condition_number": 3913715067658.1685,
+          "min_eigenvalue": 3.475765002209753e-11,
+          "max_eigenvalue": 136.02979403263322,
+          "near_zero_eigenvalues": 25
+        }
+      ],
+      "candidates": 35,
+      "outer_groups": 84,
+      "candidates_constant_on_some_fold": 0,
+      "candidates_constant_on_every_fold": 0,
+      "gate_passed": true,
+      "statistic_distinct_values_across_outer_folds": 3,
+      "statistic_per_outer_fold_sample": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "label": "P_only_jonikas",
+      "block": "D",
+      "weights_ever_selected": 6,
+      "weight_selection_counts": [
+        0,
+        6,
+        7,
+        43,
+        3,
+        21,
+        4
+      ],
+      "effectively_single_model": false
+    },
+    "D_only_jonikas": {
+      "base_kernels": [
+        {
+          "kernel": "linear",
+          "shape": [
+            168,
+            168
+          ],
+          "numerical_rank": 8,
+          "condition_number": Infinity,
+          "min_eigenvalue": -3.1228033486919096e-14,
+          "max_eigenvalue": 112.81674664060841,
+          "near_zero_eigenvalues": 160
+        },
+        {
+          "kernel": "rbf",
+          "shape": [
+            168,
+            168
+          ],
+          "numerical_rank": 166,
+          "condition_number": 5.077406057692321e+17,
+          "min_eigenvalue": -6.715423985866751e-15,
+          "max_eigenvalue": 84.16409585330365,
+          "near_zero_eigenvalues": 2
+        }
+      ],
+      "candidates": 35,
+      "outer_groups": 84,
+      "candidates_constant_on_some_fold": 35,
+      "candidates_constant_on_every_fold": 0,
+      "gate_passed": true,
+      "statistic_distinct_values_across_outer_folds": 3,
+      "statistic_per_outer_fold_sample": [
+        1.0,
+        0.0,
+        1.0,
+        0.5,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "label": "D_only_jonikas",
+      "block": "D",
+      "weights_ever_selected": 6,
+      "weight_selection_counts": [
+        0,
+        36,
+        13,
+        18,
+        2,
+        12,
+        3
+      ],
+      "effectively_single_model": false
+    },
+    "Dplus_only_jonikas_Dplus": {
+      "base_kernels": [
+        {
+          "kernel": "linear",
+          "shape": [
+            168,
+            168
+          ],
+          "numerical_rank": 11,
+          "condition_number": Infinity,
+          "min_eigenvalue": -2.370864119030744e-14,
+          "max_eigenvalue": 112.9378270421036,
+          "near_zero_eigenvalues": 157
+        },
+        {
+          "kernel": "rbf",
+          "shape": [
+            168,
+            168
+          ],
+          "numerical_rank": 166,
+          "condition_number": 1.0052884931274449e+18,
+          "min_eigenvalue": 1.784786704752928e-16,
+          "max_eigenvalue": 79.8552976473967,
+          "near_zero_eigenvalues": 2
+        }
+      ],
+      "candidates": 35,
+      "outer_groups": 84,
+      "candidates_constant_on_some_fold": 35,
+      "candidates_constant_on_every_fold": 0,
+      "gate_passed": true,
+      "statistic_distinct_values_across_outer_folds": 3,
+      "statistic_per_outer_fold_sample": [
+        1.0,
+        0.0,
+        1.0,
+        0.5,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "label": "Dplus_only_jonikas_Dplus",
+      "block": "D+",
+      "d_plus": {
+        "coordinates": 26,
+        "odd_coordinates": 11,
+        "symmetric_coordinates": 15,
+        "scale_c23": 0.11867029870268869,
+        "scale_c25": 0.6842018631042383,
+        "scale_floor": 0.01,
+        "available_c23": 164,
+        "available_c25": 164,
+        "context_missing_records": 4,
+        "partner_ties": 0
+      },
+      "weights_ever_selected": 7,
+      "weight_selection_counts": [
+        2,
+        35,
+        10,
+        13,
+        3,
+        17,
+        4
+      ],
+      "effectively_single_model": false
+    }
+  }
+}
