@@ -1,0 +1,74 @@
+{
+  "J2_score": {
+    "increment": 0.04664723032069984,
+    "ci95": [
+      -0.01574537037037035,
+      0.11162477355598317
+    ],
+    "frac_positive": 0.93525,
+    "draws": 4000
+  },
+  "J2_direction": {
+    "increment": 0.13119533527696792,
+    "ci95": [
+      0.035481853707277716,
+      0.24116128561952563
+    ],
+    "frac_positive": 0.9965,
+    "draws": 4000
+  },
+  "J2_record_level": {
+    "both": 79,
+    "pad_only": 24,
+    "d_only": 18,
+    "neither": 47,
+    "net": 6
+  },
+  "C3_record_level": {
+    "correct": {
+      "PaD": 611,
+      "A_match": 613,
+      "A_rbf": 606,
+      "D_only": 501,
+      "P_only": 597
+    },
+    "P_and_D": 456,
+    "P_not_D": 141,
+    "D_not_P": 45,
+    "neither": 15,
+    "PaD_rescues_where_both_single_fail": 0,
+    "PaD_loses_where_a_single_wins": 31
+  },
+  "jonikas_table": {
+    "PaD": {
+      "auroc_score": 0.8811143505021056,
+      "auroc_direction": 0.8448331713637836,
+      "positives_with_forward_direction": 20
+    },
+    "A_match": {
+      "auroc_score": 0.8276643990929706,
+      "auroc_direction": 0.7142857142857143,
+      "positives_with_forward_direction": 16
+    },
+    "A_rbf": {
+      "auroc_score": 0.8109815354713313,
+      "auroc_direction": 0.6781665046971169,
+      "positives_with_forward_direction": 17
+    },
+    "D_only": {
+      "auroc_score": 0.8344671201814058,
+      "auroc_direction": 0.7136378360868156,
+      "positives_with_forward_direction": 18
+    },
+    "P_only": {
+      "auroc_score": 0.6767087787495951,
+      "auroc_direction": 0.5636540330417882,
+      "positives_with_forward_direction": 11
+    },
+    "Dplus_only": {
+      "auroc_score": 0.746031746031746,
+      "auroc_direction": 0.6229348882410106,
+      "positives_with_forward_direction": 13
+    }
+  }
+}
