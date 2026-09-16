@@ -1,0 +1,41 @@
+{
+  "spec_sha256": "39a8b1388d5ff1bbbd82ace7762a270db7c47751a22c767a96f00b121ded112c",
+  "reference": {
+    "jonikas": {
+      "PaD": 0.881114,
+      "A_match": 0.827664,
+      "A_rbf": 0.810982,
+      "frozen_P": 0.536443
+    },
+    "costanzo": {
+      "PaD": 611,
+      "A_match": 613,
+      "A_rbf": 606,
+      "frozen_P": 597
+    }
+  },
+  "outcomes": {
+    "J": {
+      "D_only_auroc": 0.8344671201814058,
+      "outcome": "J2"
+    },
+    "X": {
+      "Dplus_only_auroc": 0.746031746031746,
+      "difference": -0.08843537414965974,
+      "outcome": "X3"
+    },
+    "C": {
+      "D_only_correct": 501.0,
+      "outcome": "C3"
+    },
+    "P": {
+      "P_only_jonikas_auroc": 0.6767087787495951,
+      "frozen_P_jonikas": 0.536443,
+      "P_only_costanzo_correct": 597.0,
+      "frozen_P_costanzo": 597,
+      "jonikas_exceeds": true,
+      "costanzo_exceeds": false,
+      "consequence": "if P_only materially exceeds the frozen score, every comparison against the frozen P row must be restated against P_only"
+    }
+  }
+}
