@@ -1,10 +1,10 @@
 # PaD — when perturbation context changes directional evidence
 
-**Anonymous GitHub reproducibility release v4. Paper frozen at v08.**
+**Anonymous GitHub reproducibility release v5. Aligned to paper v31.**
 
-[Revision notes](docs/RELEASE_V4.md) · [Anonymous distribution](docs/ANONYMITY.md)
+[Revision notes](docs/RELEASE_V5.md) · [Anonymous distribution](docs/ANONYMITY.md)
 
-PaD combines a frozen Proposer channel with double-perturbation evidence. This repository contains the shared learner, three experiment suites, required prepared inputs, raw phenotype inputs, and complete formal prediction records. It replaces the bulky experiment delivery with a runnable source release; paper results and the learning rules are unchanged.
+PaD combines a frozen Proposer channel with double-perturbation evidence. This repository carries the part the manuscript archive does not: the machinery that **refits** the paper's results. The manuscript archive ships the paper, its evidence ledgers and lightweight verification; this repository ships the shared learner, four experiment suites, the required prepared inputs, the raw phenotype inputs and the complete formal prediction records. The learning rules and every reported number are unchanged.
 
 [中文说明](README_CN.md) · [Reproduction guide](docs/REPRODUCIBILITY.md) · [Data and provenance](docs/DATA_SOURCES.md) · [Result map](docs/RESULTS.md)
 
@@ -43,6 +43,8 @@ All generated files go to `runs/`, which is excluded from Git. Use `python repro
 | Réd comparisons | `python reproduce.py red --dataset costanzo` and `python reproduce.py red --dataset jonikas` | Fresh factorization using the released Réd implementation |
 | Jonikas context diagnostic | `python reproduce.py background` | Fresh nested refits at 100%, 50%, and 0% pair-level availability |
 | Raw Costanzo panel aggregation | `python reproduce.py prepare-costanzo` | Rebuilds the Réd matrices from the bundled assay rows |
+| Source-support experiments (joint control, source ablation, hardening) | `python experiments/source/code/verify_stored_results.py` to check, `joint_control_reproduce.py` / `source_ablation_reproduce.py` / `source_task_hardening.py` to refit | Frozen prepared inputs; all reported source configurations and fixed-prediction statistics |
+| Same-rule single-channel controls | `python -m scc.run` | Five learner-panel cells under the frozen rule at matched 35-candidate capacity |
 
 The full external comparisons are substantially more expensive than verification. They are optional local runs, not part of the default GitHub workflow. Model pickles and nested caches are generated on demand and are not shipped.
 
@@ -58,8 +60,10 @@ These are different tasks. The mechanism classification certificate is not a cer
 
 ## Repository layout
 
-- `src/pad/`: one shared copy of the frozen kernels, selector, Proposer features, and readout functions.
-- `experiments/`: mechanism generation/calibration, yeast adapters, and external-model training.
+- `src/pad/`: one shared copy of the frozen kernels, selector, Proposer features, readout functions, and the panel runner the single-channel and source experiments reuse.
+- `experiments/`: mechanism generation/calibration, yeast adapters, external-model training, and `source/` — the two source-support experiments as integrated in paper v31.
+- `scc/`, `scc_results/`: same-rule single-channel controls and the per-record ledgers the appendix cites.
+- `protocols/`: the pre-registered specification for those controls, with its hash.
 - `configs/`: original finite grids, physical settings, seeds, masks, and certification family.
 - `data/`: prepared PaD inputs and source phenotype/reference data.
 - `reference/`: formal predictions, selected configurations, calibration records, and result summaries.

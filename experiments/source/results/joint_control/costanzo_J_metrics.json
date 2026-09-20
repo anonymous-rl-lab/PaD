@@ -1,0 +1,7 @@
+{
+  "dataset": "Costanzo",
+  "n": 657,
+  "correct": 607,
+  "accuracy": 0.923896499238965,
+  "d_AUROC": 0.9677167694479532
+}

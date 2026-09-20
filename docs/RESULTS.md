@@ -1,6 +1,6 @@
 # Paper result map
 
-The paper is frozen at v08; `PAPER_FREEZE.json` identifies the exact archive. `verify` recomputes the quantities below from delivered records. PaD, P, and internal controls retain their original column names in source evidence to preserve provenance.
+The repository is aligned to paper v31; `PAPER_FREEZE.json` identifies the edition. `verify` recomputes the quantities below from delivered records. PaD, P, and internal controls retain their original column names in source evidence to preserve provenance.
 
 | Paper evidence | Source in this repository | Rebuild |
 |---|---|---|

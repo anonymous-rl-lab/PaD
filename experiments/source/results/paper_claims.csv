@@ -1,0 +1,8 @@
+claim_id,claim,metric,value,scope
+M_PRIMARY,SH to SMH is the only primary M contrast,delta d,0.1801101392938128,development; both descriptive ranges positive
+M_FULL,Full-context M d increment,delta d,0.017492711370262426,supplementary; pair range spans zero
+V_PRIMARY,V observed F increment in SMHB,delta F,0.037252996436669794,development; both ranges span zero; saturated direction count
+V_OTHER_CONTEXT,SMH to SMHV direction loss,annotated count,21 to 20,"context difference, not training order"
+SELECTIVITY,Combined selectivity,pair range,"[-0.011825,0.083025]",inconclusive
+MISMATCH,Both observed primary increments exceed 100 mismatches,exceedance count,0/100 each,not conditional permutation or a conditional-independence p-value
+J,PaD minus J,F and d,+0.005507; -0.006479,both descriptive intervals span zero; neither superiority nor equivalence established

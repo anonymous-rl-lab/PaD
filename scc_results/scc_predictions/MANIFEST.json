@@ -1,17 +1,10 @@
 {
   "spec_sha256": "39a8b1388d5ff1bbbd82ace7762a270db7c47751a22c767a96f00b121ded112c",
-  "note": "SCC cells are the five pre-registered fits; PaD/A_match/A_rbf ledgers are the paper's existing learners, re-emitted in the same format so the direction component is on file. Jonikas PaD/A_match/A_rbf were refitted (AUROC reproduces 0.881114 / 0.827664 / 0.810982); Costanzo ones are converted from reference/costanzo/internal_controls.csv (611 / 613 / 606).",
   "files": {
-    "A_match_costanzo.csv": "9e7bfb8e656d12ff95885a679bd6dde99f84e589b7f16a3e6d14936f3d3b80e7",
-    "A_match_jonikas.csv": "76cc8ddccc7e3b13aa8279eb0ad1ab63e547d739852d6e757064750caab02ece",
-    "A_rbf_costanzo.csv": "f19857d8da3658f39c7b12d8d78514431f4e6648406ecafb233dc8c829575471",
-    "A_rbf_jonikas.csv": "62f1458de7f4f648a4a85d23fd579fcf6ada6a366573370c32d9df7e262b0a52",
-    "D_only_costanzo.csv": "b38f76bbf1a98cfc793c5c67d494879e1be1d5c60e927c325edebc86df00ed9e",
-    "D_only_jonikas.csv": "28876732813bd18dce446d576fbc1a9cd73700b0a02d5aa927e478cbc6664ca4",
-    "Dplus_only_jonikas_Dplus.csv": "29abe55e5baa52f0d719fcfb33a1cb7c869e787152aa34dea8beae5203d6de52",
     "P_only_costanzo.csv": "42ddc384a586fbacee4f9394b0e2b7ed600f5fb67c3ee84fe6a3c87767582617",
+    "D_only_costanzo.csv": "b38f76bbf1a98cfc793c5c67d494879e1be1d5c60e927c325edebc86df00ed9e",
     "P_only_jonikas.csv": "e36f266e9757d0150ae48c70a369fb46db852cce1888f3c0dd0c3545382cf0ff",
-    "PaD_costanzo.csv": "7a5d4026b3d86e340b88173aa8b1b3f53610346bc73201dbbf4a20e01f17b6c0",
-    "PaD_jonikas.csv": "7f94c125ab38c56e875ca63a9ab175491c5e7e7b70e0de5a8bdc913fc3516a1d"
+    "D_only_jonikas.csv": "28876732813bd18dce446d576fbc1a9cd73700b0a02d5aa927e478cbc6664ca4",
+    "Dplus_only_jonikas_Dplus.csv": "29abe55e5baa52f0d719fcfb33a1cb7c869e787152aa34dea8beae5203d6de52"
   }
 }

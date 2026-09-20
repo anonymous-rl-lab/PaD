@@ -1,0 +1,11 @@
+{
+  "version": "v31",
+  "primary_M": "SH->SMH",
+  "primary_V": "SMHB->FULL",
+  "M_full": "supplementary FULL-SHVB; no same-context mismatch",
+  "historical_protocol_unchanged": true,
+  "mismatch_interpretation": "pair-orbit block mismatch, not conditional permutation; plus-one fraction is descriptive",
+  "resampling": "fixed predictions; endpoint multiplicity sum or unordered-pair multiplicity; no general network coverage guarantee",
+  "selectivity": "supplementary, both readouts use same labels; not a confirmed double dissociation",
+  "frozen_seeds_are_integer_identifiers_not_execution_dates": true
+}

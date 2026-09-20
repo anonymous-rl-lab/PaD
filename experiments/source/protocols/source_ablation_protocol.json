@@ -1,0 +1,19 @@
+{
+  "status": "development-only source diagnosis; reconstructed compact protocol from the executed v1 ledger",
+  "dataset": "Jonikas prepared panel, 168 ordered records / 84 unordered pairs",
+  "learner": "pure joint RBF J, width 0.5, five ridge values, endpoint-excluded nested CV, F-target paired 1-SE selection",
+  "source_coordinates": {
+    "S": [0,1,2,11,13,14],
+    "M": [8,9,12],
+    "H": [15],
+    "V": [3,4,5,6,7,10,16,17],
+    "B": [18,19,20,21,22]
+  },
+  "paper_relevant_contrasts": [
+    "S -> S+M",
+    "S+H -> S+M+H",
+    "S+M+H+B -> FULL",
+    "FULL-M -> FULL"
+  ],
+  "scope": "same development panel; not external validation"
+}

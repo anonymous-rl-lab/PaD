@@ -1,0 +1,32 @@
+[
+  {
+    "group": "0",
+    "lambda_": 0.3,
+    "eligible": 4,
+    "n_train": 508
+  },
+  {
+    "group": "1",
+    "lambda_": 0.3,
+    "eligible": 3,
+    "n_train": 552
+  },
+  {
+    "group": "2",
+    "lambda_": 0.3,
+    "eligible": 3,
+    "n_train": 519
+  },
+  {
+    "group": "3",
+    "lambda_": 0.0003,
+    "eligible": 1,
+    "n_train": 498
+  },
+  {
+    "group": "4",
+    "lambda_": 0.3,
+    "eligible": 3,
+    "n_train": 551
+  }
+]

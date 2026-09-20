@@ -1,0 +1,3 @@
+variant,d_AUROC,F_AUROC,known_direction_correct,known_direction_ties,n_known_direction,eigendecompositions,seconds,full_J_reproduction_max_abs_error
+SLB,0.8513119533527697,0.8756073858114674,21,0,21,1484,8.01917270499689,2.220446049250313e-16
+S,0.6631033365727244,0.700032393909945,18,0,21,1484,6.588489918001869,

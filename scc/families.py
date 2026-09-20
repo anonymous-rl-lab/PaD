@@ -34,8 +34,8 @@ for _p in (ROOT / "src/pad", ROOT / "experiments/mechanism", ROOT / "verificatio
 import kernel as k  # noqa: E402
 from controls import RBF_W  # noqa: E402
 
-from ccct.frozen import FrozenPanel  # noqa: E402
-from ccct import dplus  # noqa: E402
+from frozen_panel import FrozenPanel  # noqa: E402
+import dplus  # noqa: E402
 
 SINGLE = {"P_only": "P", "D_only": "D", "Dplus_only": "D"}
 WEIGHTS = [(w, 1.0 - w) for w in RBF_W]

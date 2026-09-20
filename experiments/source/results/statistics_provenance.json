@@ -1,0 +1,23 @@
+{
+  "n_draws": 10000,
+  "inputs": {
+    "hardening_static_predictions.csv": "70c2890b3eb623a43df5f86bece0291b382f7ccc61aa24e0dec18b3d48f00c82",
+    "hardening_shuffle_results.csv": "b2579ac88370845af9cae829f05e31ffd9aa369188f19d6413c2e49bb453e215"
+  },
+  "schemes": {
+    "gene": {
+      "seed": 20260923,
+      "units": 30,
+      "valid_draws": 10000,
+      "weights": "endpoint multiplicity(a) + multiplicity(b)"
+    },
+    "pair": {
+      "seed": 20260924,
+      "units": 84,
+      "valid_draws": 10000,
+      "weights": "shared multiplicity of unordered pair"
+    }
+  },
+  "scope": "same development panel; fixed predictions; no refitting or independent validation; percentile ranges are descriptive",
+  "legacy_selectivity_name": "combined_double_dissociation is now called combined_selectivity; numerical definition unchanged"
+}

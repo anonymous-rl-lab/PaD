@@ -162,7 +162,7 @@ def run(out_dir=None, draws=4000):
             assert len(d.weights[0]) == 2 and len(d.components(np.arange(fp.n))[0]) == 2, (
                 "%s must mix exactly two base kernels" % family
             )
-            st = fp.structure(None)
+            st = fp.structure()
             assert all(
                 np.array_equal(st.tr[m], fp.archived_allowed[m]) for m in range(fp.M)
             ), "exclusion sets differ from the archived ones"

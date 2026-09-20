@@ -1,0 +1,3 @@
+task,primary,observed,mismatch_mean,mismatch_sd,mismatch_q025,mismatch_q975,n_exceed,n,plus_one_exceedance_fraction,interpretation
+M,delta_d,0.18011013929381275,-0.044645286686102945,0.057694301085357454,-0.1788143828960154,0.0663994169096207,0,100,0.009900990099009901,pair-orbit block mismatch; not a conditional-independence p-value
+V,delta_F,0.037252996436669905,-0.16094590217039198,0.0657037170326649,-0.28155166828636224,-0.04389374797538065,0,100,0.009900990099009901,pair-orbit block mismatch; not a conditional-independence p-value

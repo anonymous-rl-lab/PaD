@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/biolab/red",
+  "commit": "dec800b3f15fb557ee585a3621cd44b7118e5cc9",
+  "files": {
+    "N-linked-glycans_positive.txt": "f9bbd6ebba1f8a48c7a338c3d7d0c86faf6b9bf610ff62bdb420578735515846",
+    "KEGG_ordered.txt": "9c72bb8ae42db81571e4a8594f1ba07372ea13eb4349f3e323890a1e8bf5add9",
+    "README.txt": "856298fd21bfba47a420454653f6b4182f4a1fd7f6512f949853e1ed6b362ca7",
+    "KEGG_nonordered.txt": "727799dc09a9d44eb5283e50521578fb199831f469100f371009039163b2206d",
+    "080930a_DM_data.mat": "b143ac6eaabe529b7a029a9cd9ac6d8c891a4be75e66ce3c7db6fc946a509f03",
+    "N-linked-glycans_negative.txt": "90b6116803bfc74159de5138e326ef850e96d5517daef31ebdd13c51446a896a"
+  }
+}

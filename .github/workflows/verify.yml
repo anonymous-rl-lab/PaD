@@ -3,7 +3,7 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -11,7 +11,11 @@ jobs:
           python-version: '3.12'
           cache: pip
       - run: python -m pip install -r requirements-core.txt
-      - run: python reproduce.py verify
+      - name: Archived evidence, encoders and manifest integrity
+        run: python reproduce.py verify
+      - name: Source and J statistics from frozen scores
+        run: python verify_stored_results.py
+        working-directory: experiments/source/code
       - uses: actions/upload-artifact@v4
         with:
           name: verification-report

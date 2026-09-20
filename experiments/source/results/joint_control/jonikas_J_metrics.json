@@ -1,0 +1,10 @@
+{
+  "dataset": "Jonikas",
+  "n": 168,
+  "F_AUROC": 0.8756073858114674,
+  "d_AUROC": 0.8513119533527697,
+  "u_AUROC": 0.7265954000647878,
+  "known_direction_correct": 21,
+  "n_known_direction": 21,
+  "average_precision": 0.3972285374209016
+}
