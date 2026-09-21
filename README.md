@@ -70,6 +70,7 @@ These are different tasks. The mechanism classification certificate is not a cer
 - `verification/`: evidence rescore and encoder/solver checks.
 - `third_party/red/`: attributed Python 3 port and original GPL license.
 - `docs/`: methods-to-files mapping, provenance, cleanup decisions, and paper freeze record.
+- `tools/`: the bundled `pad-causal` 0.1.1 wheel and its install instructions, so no package index is needed.
 
 The release starts real-data PaD fitting from the preserved P/D feature interface. It does not reconstruct the complete historical training ancestry of the inherited Proposer or regenerate all expression-derived features from a raw GEO download. The mechanism suite does execute the full raw-measurement-to-encoder path. These boundaries are documented separately from result verification.
 
